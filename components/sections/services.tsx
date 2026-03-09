@@ -31,8 +31,8 @@ export function ServicesSection() {
             return (
               <Reveal key={service.title} delay={index * 0.06}>
                 <article className="group h-full rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.06] to-white/[0.02] p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-accent/45">
-                  <div className="mb-5 inline-flex rounded-xl border border-accent/30 bg-accent/10 p-3 text-accentSoft">
-                    <Icon className="h-5 w-5" />
+                  <div className="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accentSoft">
+                    <Icon className="h-6 w-6" />
                   </div>
                   <h3 className="font-display text-xl text-white">{service.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-textMuted">{service.description}</p>
@@ -45,4 +45,3 @@ export function ServicesSection() {
     </SectionShell>
   );
 }
-

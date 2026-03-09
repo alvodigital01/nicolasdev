@@ -7,7 +7,7 @@ export function BeforeAfterSection() {
   return (
     <SectionShell id="transformacao" className="py-14">
       <Container className="space-y-10">
-        <Reveal>
+        <Reveal className="h-full">
           <SectionHeading
             eyebrow="Transformação"
             title="Antes parecia amador. Depois, presença digital de marca forte."
@@ -16,8 +16,8 @@ export function BeforeAfterSection() {
         </Reveal>
 
         <div className="grid gap-5 lg:grid-cols-2">
-          <Reveal>
-            <article className="rounded-3xl border border-red-300/20 bg-red-300/5 p-6">
+          <Reveal className="h-full">
+            <article className="flex h-full flex-col rounded-3xl border border-red-300/20 bg-red-300/5 p-6">
               <span className="text-xs uppercase tracking-[0.2em] text-red-200/80">Antes</span>
               <h3 className="mt-3 font-display text-2xl text-white">Presença genérica e sem confiança</h3>
               <ul className="mt-4 space-y-2 text-sm text-textMuted">
@@ -27,8 +27,8 @@ export function BeforeAfterSection() {
               </ul>
             </article>
           </Reveal>
-          <Reveal delay={0.08}>
-            <article className="rounded-3xl border border-accent/30 bg-accent/10 p-6 shadow-glow">
+          <Reveal delay={0.08} className="h-full">
+            <article className="flex h-full flex-col rounded-3xl border border-accent/30 bg-accent/10 p-6 shadow-glow">
               <span className="text-xs uppercase tracking-[0.2em] text-accentSoft">Depois</span>
               <h3 className="mt-3 font-display text-2xl text-white">Imagem profissional que gera autoridade</h3>
               <ul className="mt-4 space-y-2 text-sm text-[#d6e6ff]">

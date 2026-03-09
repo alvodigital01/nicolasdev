@@ -1,0 +1,13 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#12294D"/><stop offset="1" stop-color="#1C3F73"/></linearGradient></defs>
+<rect width="1200" height="800" rx="36" fill="url(#g)"/>
+<rect x="70" y="60" width="1060" height="680" rx="24" fill="#070A12" stroke="#355A8B"/>
+<rect x="110" y="120" width="980" height="540" rx="18" fill="#121F38" stroke="#3A6599"/>
+<rect x="160" y="170" width="560" height="22" rx="11" fill="#91D0FF"/>
+<rect x="160" y="208" width="460" height="12" rx="6" fill="#697F9E"/>
+<rect x="160" y="236" width="430" height="12" rx="6" fill="#556B8E"/>
+<rect x="160" y="300" width="880" height="130" rx="14" fill="#1E3B67"/>
+<rect x="160" y="450" width="420" height="56" rx="28" fill="#4EA1FF"/>
+<rect x="610" y="450" width="430" height="56" rx="28" fill="#1B2E4E" stroke="#3B679B"/>
+<text x="110" y="705" fill="#9DB2D3" font-family="Arial" font-size="30">CREATOR SPRINT • LANDING DE LANÇAMENTO</text>
+</svg>

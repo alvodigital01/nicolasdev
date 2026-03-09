@@ -14,6 +14,7 @@ const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"]
 });
+
 const playfair = Playfair_Display({
   variable: "--font-playfair",
   subsets: ["latin"],
@@ -30,6 +31,9 @@ export const metadata: Metadata = {
       "Criação de landing pages, sites institucionais e experiências digitais modernas para negócios que querem crescer.",
     type: "website",
     locale: "pt_BR"
+  },
+  icons: {
+    icon: "/icon.svg"
   }
 };
 
@@ -40,8 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${sora.variable} ${jakarta.variable} ${playfair.variable} bg-background font-body text-white antialiased`}>{children}</body>
+      <body className={`${sora.variable} ${jakarta.variable} ${playfair.variable} bg-background font-body text-white antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
-

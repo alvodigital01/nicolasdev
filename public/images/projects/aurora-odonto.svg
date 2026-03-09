@@ -1,0 +1,15 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E1B36"/><stop offset="1" stop-color="#122A4F"/></linearGradient></defs>
+<rect width="1200" height="800" rx="36" fill="url(#g)"/>
+<rect x="60" y="60" width="1080" height="680" rx="24" fill="#070A12" stroke="#2B4A7A"/>
+<rect x="110" y="120" width="300" height="16" rx="8" fill="#7EC0FF"/>
+<rect x="110" y="160" width="520" height="10" rx="5" fill="#6E7B98"/>
+<rect x="110" y="186" width="470" height="10" rx="5" fill="#51607D"/>
+<rect x="110" y="250" width="980" height="340" rx="16" fill="#0F172A" stroke="#35507C"/>
+<rect x="140" y="280" width="420" height="220" rx="12" fill="#1F3A68"/>
+<rect x="590" y="280" width="470" height="20" rx="10" fill="#7EC0FF"/>
+<rect x="590" y="320" width="430" height="12" rx="6" fill="#5B6D90"/>
+<rect x="590" y="350" width="400" height="12" rx="6" fill="#4A5E84"/>
+<rect x="590" y="420" width="220" height="50" rx="25" fill="#4EA1FF"/>
+<text x="110" y="680" fill="#9DB2D3" font-family="Arial" font-size="30">AURORA ODONTO • SITE INSTITUCIONAL</text>
+</svg>

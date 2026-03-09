@@ -7,6 +7,7 @@ export type Service = {
   title: string;
   description: string;
   icon: "rocket" | "layout" | "briefcase" | "megaphone" | "smartphone" | "shield";
+  image: string;
 };
 
 export type Differential = {
@@ -21,6 +22,8 @@ export type Project = {
   category: ProjectCategory;
   description: string;
   metrics: string;
+  image: string;
+  href: string;
 };
 
 export type ProcessStep = {
@@ -51,90 +54,108 @@ export const services: Service[] = [
   {
     title: "Landing Pages",
     description: "Páginas estratégicas para campanhas, lançamentos e captação de leads com foco total em conversão.",
-    icon: "rocket"
+    icon: "rocket",
+    image: "/images/services/landing.png"
   },
   {
     title: "Sites Institucionais",
     description: "Estrutura profissional para empresas que precisam transmitir credibilidade e vender mais no digital.",
-    icon: "layout"
+    icon: "layout",
+    image: "/images/services/institucional.png"
   },
   {
     title: "Portfólios Profissionais",
     description: "Apresentações premium para marcas pessoais e especialistas que querem parecer referência no mercado.",
-    icon: "briefcase"
+    icon: "briefcase",
+    image: "/images/services/portfolio.png"
   },
   {
     title: "Páginas de Campanha",
     description: "Páginas de alta performance com copy orientada a resultado e design pensado para ação.",
-    icon: "megaphone"
+    icon: "megaphone",
+    image: "/images/services/campanhas.png"
   },
   {
     title: "Sites Responsivos",
     description: "Experiência impecável em celular, tablet e desktop com carregamento otimizado e visual moderno.",
-    icon: "smartphone"
+    icon: "smartphone",
+    image: "/images/services/responsivo.png"
   },
   {
-    title: "Pagina de Vendas",
-    description: "Estruturas de oferta com copy, prova e CTA para aumentar pedidos de orcamento.",
-    icon: "shield"
+    title: "Página de Vendas",
+    description: "Estruturas de oferta com copy, prova e CTA para aumentar pedidos de orçamento.",
+    icon: "shield",
+    image: "/images/services/vendas.png"
   }
 ];
-
 
 export const differentials: Differential[] = [
   {
     title: "Design que transmite autoridade",
-    description: "Cada layout e construido para valorizar marca, posicionamento e percepcao premium."
+    description: "Cada layout é construído para valorizar marca, posicionamento e percepção premium."
   },
   {
-    title: "Estrategia orientada a conversao",
-    description: "Arquitetura de conteudo e CTAs para gerar mais contatos e oportunidades reais."
+    title: "Estratégia orientada à conversão",
+    description: "Arquitetura de conteúdo e CTAs para gerar mais contatos e oportunidades reais."
   },
   {
-    title: "Performance e experiencia",
-    description: "Sites rapidos, responsivos e fluidos para nao perder atencao nem vendas."
+    title: "Performance e experiência",
+    description: "Sites rápidos, responsivos e fluidos para não perder atenção nem vendas."
   },
   {
-    title: "Acabamento de alto nivel",
-    description: "Microinteracoes, hierarquia visual e detalhes sofisticados que elevam o valor percebido."
+    title: "Acabamento de alto nível",
+    description: "Microinterações, hierarquia visual e detalhes sofisticados que elevam o valor percebido."
   }
 ];
+
 export const projects: Project[] = [
   {
     name: "Aurora Odonto",
     category: "Institucional",
     description: "Reposicionamento digital para clínica premium com agendamento simplificado.",
-    metrics: "+38% em contatos no primeiro mês"
+    metrics: "+38% em contatos no primeiro mês",
+    image: "/images/projects/aurora-odonto.svg",
+    href: "#"
   },
   {
     name: "Matriz Fitness",
     category: "Landing Page",
     description: "Landing de campanha para plano anual com estrutura focada em tráfego pago.",
-    metrics: "Custo por lead 29% menor"
+    metrics: "Custo por lead 29% menor",
+    image: "/images/projects/matriz-fitness.svg",
+    href: "#"
   },
   {
     name: "Luna Arquitetura",
     category: "Portfólio",
     description: "Portfólio minimalista para estúdio autoral reforçando percepção de exclusividade.",
-    metrics: "Tempo de permanência 2.1x maior"
+    metrics: "Tempo de permanência 2.1x maior",
+    image: "/images/projects/luna-arquitetura.svg",
+    href: "#"
   },
   {
     name: "Prime Legal",
     category: "Conversão",
     description: "Página de aquisição para escritório com prova social e funil de atendimento.",
-    metrics: "+52% em solicitações de consulta"
+    metrics: "+52% em solicitações de consulta",
+    image: "/images/projects/prime-legal.svg",
+    href: "#"
   },
   {
     name: "Vittori Imóveis",
     category: "Institucional",
     description: "Site moderno para imobiliária com vitrine premium e captura inteligente de leads.",
-    metrics: "+44% de leads qualificados"
+    metrics: "+44% de leads qualificados",
+    image: "/images/projects/vittori-imoveis.svg",
+    href: "#"
   },
   {
     name: "Creator Sprint",
     category: "Landing Page",
     description: "Lançamento digital com narrativa persuasiva e blocos de objeção/resposta.",
-    metrics: "Taxa de conversão de 8.7%"
+    metrics: "Taxa de conversão de 8.7%",
+    image: "/images/projects/creator-sprint.svg",
+    href: "#"
   }
 ];
 
@@ -197,4 +218,3 @@ export const faqs: FAQ[] = [
     answer: "Você envia os objetivos do projeto e recebe uma proposta clara com escopo, prazo e investimento."
   }
 ];
-

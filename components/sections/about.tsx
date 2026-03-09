@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionHeading } from "../ui/section-heading";
@@ -15,14 +16,25 @@ export function AboutSection() {
           />
         </Reveal>
         <Reveal delay={0.15}>
-          <div className="rounded-3xl border border-white/10 bg-panel/65 p-7 shadow-soft backdrop-blur-md">
-            <p className="text-sm leading-relaxed text-textMuted md:text-base">
-              Meu trabalho une direção visual premium, estrutura estratégica de conteúdo e desenvolvimento moderno para transformar sua presença digital em uma vitrine de autoridade. O objetivo não é apenas ter um site bonito, mas uma presença que fortalece sua marca e gera oportunidades reais.
-            </p>
+          <div className="rounded-3xl border border-white/10 bg-panel/65 p-4 shadow-soft backdrop-blur-md">
+            <div className="grid gap-5 md:grid-cols-[0.72fr_1.28fr] md:items-center">
+              <div className="mx-auto w-full max-w-[240px] overflow-hidden rounded-2xl border border-white/10 md:max-w-none">
+                <Image
+                  src="/images/sobre-nicolas.jpg"
+                  alt="Nicolas Lucas em ambiente de trabalho"
+                  width={1600}
+                  height={1600}
+                  className="h-auto w-full object-cover"
+                  sizes="(max-width: 768px) 240px, 28vw"
+                />
+              </div>
+              <p className="text-sm leading-relaxed text-textMuted md:text-base">
+                Meu trabalho une direção visual premium, estrutura estratégica de conteúdo e desenvolvimento moderno para transformar sua presença digital em uma vitrine de autoridade. O objetivo não é apenas ter um site bonito, mas uma presença que fortalece sua marca e gera oportunidades reais.
+              </p>
+            </div>
           </div>
         </Reveal>
       </Container>
     </SectionShell>
   );
 }
-

@@ -19,7 +19,7 @@ export function TestimonialsSection() {
           {testimonials.map((item, index) => (
             <Reveal key={item.name} delay={index * 0.08}>
               <article className="h-full rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur-sm">
-                <p className="text-sm leading-relaxed text-[#d6e6ff]">“{item.quote}”</p>
+                <p className="text-sm leading-relaxed text-[#d6e6ff]">"{item.quote}"</p>
                 <div className="mt-6 border-t border-white/10 pt-4">
                   <p className="font-medium text-white">{item.name}</p>
                   <p className="text-xs uppercase tracking-[0.14em] text-textMuted">{item.role}</p>
@@ -32,4 +32,3 @@ export function TestimonialsSection() {
     </SectionShell>
   );
 }
-

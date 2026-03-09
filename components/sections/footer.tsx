@@ -19,10 +19,10 @@ export function Footer() {
           <Link href="#processo" className="transition hover:text-white">
             Processo
           </Link>
-          <Link href="https://instagram.com" className="transition hover:text-white">
+          <Link href="https://instagram.com/nicolasdev_oficial" className="transition hover:text-white">
             Instagram
           </Link>
-          <Link href="https://wa.me/5500000000000" className="transition hover:text-white">
+          <Link href="https://wa.me/5543988724786?text=Ol%C3%A1%2C%20Nicolas.%20Vim%20pelo%20seu%20site%20e%20quero%20um%20or%C3%A7amento%20para%20criar%20um%20site%20profissional%20para%20o%20meu%20neg%C3%B3cio." className="transition hover:text-white">
             WhatsApp
           </Link>
         </div>

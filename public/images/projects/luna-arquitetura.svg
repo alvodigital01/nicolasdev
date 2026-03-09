@@ -1,0 +1,14 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F1E3A"/><stop offset="1" stop-color="#1A345F"/></linearGradient></defs>
+<rect width="1200" height="800" rx="36" fill="url(#g)"/>
+<rect x="70" y="60" width="1060" height="680" rx="24" fill="#070A12" stroke="#2E507D"/>
+<rect x="110" y="120" width="280" height="18" rx="9" fill="#83C5FF"/>
+<rect x="110" y="165" width="980" height="2" fill="#30496E"/>
+<rect x="110" y="210" width="300" height="450" rx="16" fill="#101B31" stroke="#355786"/>
+<rect x="450" y="210" width="300" height="450" rx="16" fill="#101B31" stroke="#355786"/>
+<rect x="790" y="210" width="300" height="450" rx="16" fill="#101B31" stroke="#355786"/>
+<rect x="145" y="250" width="230" height="250" rx="12" fill="#1D3865"/>
+<rect x="485" y="250" width="230" height="250" rx="12" fill="#1D3865"/>
+<rect x="825" y="250" width="230" height="250" rx="12" fill="#1D3865"/>
+<text x="110" y="705" fill="#9DB2D3" font-family="Arial" font-size="30">LUNA ARQUITETURA • PORTFÓLIO</text>
+</svg>

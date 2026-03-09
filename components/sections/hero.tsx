@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Play } from "lucide-react";
 import { Container } from "../ui/container";
@@ -64,23 +65,23 @@ export function HeroSection() {
         >
           <div className="absolute -left-8 top-10 h-32 w-32 rounded-full bg-accent/20 blur-3xl" />
           <div className="absolute -right-6 bottom-0 h-24 w-24 rounded-full bg-accentSoft/25 blur-3xl" />
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-panel/70 p-4 shadow-soft backdrop-blur-xl">
-            <div className="rounded-2xl border border-white/10 bg-background p-5">
-              <div className="mb-4 flex gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/80" />
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
-              </div>
-              <div className="space-y-4">
-                <div className="h-36 rounded-xl border border-accent/30 bg-gradient-to-br from-accent/25 to-transparent p-4">
-                  <div className="h-3 w-1/3 rounded-full bg-white/60" />
-                  <div className="mt-3 h-2 w-3/4 rounded-full bg-white/25" />
-                  <div className="mt-2 h-2 w-2/3 rounded-full bg-white/20" />
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="h-24 rounded-xl border border-white/10 bg-white/[0.03]" />
-                  <div className="h-24 rounded-xl border border-white/10 bg-white/[0.03]" />
-                </div>
+
+          <div className="relative mx-auto w-full max-w-[420px] overflow-hidden rounded-3xl border border-white/10 bg-panel/70 p-3 shadow-soft backdrop-blur-xl lg:max-w-[560px]">
+            <div className="relative h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-background/80 sm:h-[500px] lg:h-[560px]">
+              <Image
+                src="/images/hero-nicolas.png"
+                alt="Nicolas Lucas, desenvolvedor web"
+                width={2160}
+                height={2700}
+                priority
+                quality={100}
+                unoptimized
+                className="h-full w-full object-cover object-top"
+                sizes="(max-width: 1024px) 420px, 560px"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
+              <div className="absolute bottom-3 right-3 z-10 rounded-full border border-white/20 bg-background/85 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-accentSoft backdrop-blur-md">
+                Desenvolvedor Web
               </div>
             </div>
           </div>
@@ -89,4 +90,3 @@ export function HeroSection() {
     </section>
   );
 }
-
