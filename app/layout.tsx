@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Playfair_Display, Plus_Jakarta_Sans, Sora } from "next/font/google";
+import { BackToTopFab } from "@/components/ui/back-to-top-fab";
+import { WhatsAppFab } from "@/components/ui/whatsapp-fab";
 import "./globals.css";
 
 const sora = Sora({
@@ -46,6 +48,8 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${sora.variable} ${jakarta.variable} ${playfair.variable} bg-background font-body text-white antialiased`}>
         {children}
+        <BackToTopFab />
+        <WhatsAppFab />
       </body>
     </html>
   );

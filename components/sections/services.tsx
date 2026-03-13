@@ -1,43 +1,94 @@
-import { services } from "@/data/site";
-import { BriefcaseBusiness, LayoutTemplate, Megaphone, Rocket, ShieldCheck, Smartphone } from "lucide-react";
+"use client";
+
+import Link from "next/link";
+import { MouseEvent } from "react";
+import { ArrowRight, LayoutTemplate, Megaphone, Rocket } from "lucide-react";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
-import { SectionHeading } from "../ui/section-heading";
 import { SectionShell } from "../ui/section-shell";
 
-const iconMap = {
-  rocket: Rocket,
-  layout: LayoutTemplate,
-  briefcase: BriefcaseBusiness,
-  megaphone: Megaphone,
-  smartphone: Smartphone,
-  shield: ShieldCheck
-};
+const offers = [
+  {
+    title: "Landing pages para anúncios",
+    description: "Páginas estratégicas para transformar clique em lead, conversa ou pedido de orçamento.",
+    icon: Rocket,
+    href: "#cta"
+  },
+  {
+    title: "Sites comerciais para serviços",
+    description: "Estruturas diretas para apresentar sua oferta, reforçar credibilidade e acelerar a decisão.",
+    icon: LayoutTemplate,
+    href: "#cta"
+  },
+  {
+    title: "Páginas de vendas e captura",
+    description: "Blocos pensados para destacar valor, reduzir objeção e levar o visitante para a ação.",
+    icon: Megaphone,
+    href: "#cta"
+  }
+];
 
 export function ServicesSection() {
+  const handlePointerMove = (event: MouseEvent<HTMLElement>) => {
+    const card = event.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    card.style.setProperty("--spotlight-x", `${x}px`);
+    card.style.setProperty("--spotlight-y", `${y}px`);
+  };
+
   return (
-    <SectionShell id="servicos" className="pt-14">
+    <SectionShell id="servicos" className="bg-transparent py-16 md:py-20">
       <Container className="space-y-12">
         <Reveal>
-          <SectionHeading
-            eyebrow="Oferta"
-            title="Escolha uma estrutura simples, forte e feita para converter"
-            description="Em vez de um site carregado de paginas e texto, a proposta aqui e entregar o tipo de pagina certo para sua oferta vender melhor."
-          />
+          <div className="max-w-3xl space-y-4">
+            <span className="inline-flex rounded-full border border-white/15 bg-white/[0.04] px-4 py-1 text-xs font-medium uppercase tracking-[0.18em] text-accentSoft">
+              Oferta
+            </span>
+            <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
+              Estruturas diretas, visuais e{" "}
+              <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
+                feitas para converter
+              </span>
+              .
+            </h2>
+            <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
+              Você não precisa de uma página pesada e institucional. Precisa da estrutura certa para apresentar valor, criar confiança e puxar o clique para a próxima ação.
+            </p>
+          </div>
         </Reveal>
+
         <div className="grid gap-5 lg:grid-cols-3">
-          {services.map((service, index) => {
-            const Icon = iconMap[service.icon];
+          {offers.map((offer, index) => {
+            const Icon = offer.icon;
+
             return (
-              <Reveal key={service.title} delay={index * 0.06}>
-                <article className="group h-full rounded-[28px] border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-7 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-accent/45">
-                  <div className="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-2xl border border-accent/30 bg-accent/10 text-accentSoft">
-                    <Icon className="h-6 w-6" />
-                  </div>
-                  <h3 className="font-display text-2xl text-white">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-textMuted md:text-base">{service.description}</p>
-                  <div className="mt-6 inline-flex rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.18em] text-accentSoft">
-                    Projeto direto ao ponto
+              <Reveal key={offer.title} delay={index * 0.07}>
+                <article
+                  onMouseMove={handlePointerMove}
+                  className="group relative isolate overflow-hidden rounded-[30px] border border-white/[0.05] bg-[rgba(255,255,255,0.02)] p-7 backdrop-blur-[16px] transition-all duration-400 hover:-translate-y-2 hover:border-[rgba(59,130,246,0.4)] hover:shadow-[0_24px_70px_-32px_rgba(59,130,246,0.45)]"
+                  style={{
+                    ["--spotlight-x" as string]: "50%",
+                    ["--spotlight-y" as string]: "50%"
+                  }}
+                >
+                  <div className="pointer-events-none absolute inset-0 rounded-[30px] opacity-0 transition duration-300 group-hover:opacity-100" style={{ background: "radial-gradient(420px circle at var(--spotlight-x) var(--spotlight-y), rgba(126,192,255,0.18), transparent 42%)" }} />
+                  <div className="pointer-events-none absolute inset-0 rounded-[30px] bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent_32%)] opacity-80" />
+
+                  <div className="relative flex h-full flex-col">
+                    <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-accent/20 bg-[rgba(38,73,126,0.3)] text-accentSoft shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                      <Icon className="h-5 w-5" />
+                    </div>
+
+                    <h3 className="font-display text-[1.65rem] leading-tight text-white">{offer.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-textMuted md:text-base">{offer.description}</p>
+
+                    <Link href={offer.href} className="mt-7 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/55 transition duration-300 group-hover:text-accentSoft">
+                      Quero essa estrutura
+                      <ArrowRight className="h-3.5 w-3.5 transition duration-300 group-hover:translate-x-1" />
+                    </Link>
                   </div>
                 </article>
               </Reveal>

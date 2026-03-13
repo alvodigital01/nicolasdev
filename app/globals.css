@@ -104,6 +104,40 @@ footer {
   }
 }
 
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.4);
+  }
+
+  50% {
+    transform: scale(1.08);
+    box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+  }
+}
+
+@keyframes whatsappPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(126, 192, 255, 0.22), 0 18px 40px -24px rgba(59, 130, 246, 0.55);
+  }
+
+  50% {
+    box-shadow: 0 0 0 12px rgba(126, 192, 255, 0), 0 22px 52px -24px rgba(59, 130, 246, 0.8);
+  }
+}
+@keyframes shimmerSweep {
+  0% {
+    transform: translateX(-160%) skewX(-18deg);
+  }
+
+  55%,
+  100% {
+    transform: translateX(220%) skewX(-18deg);
+  }
+}
+
 @layer utilities {
   .glass-surface {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
@@ -159,5 +193,35 @@ footer {
   .marquee-track {
     animation: marqueeLeft 28s linear infinite;
     will-change: transform;
+  }
+
+  .pulse-dot {
+    animation: pulseDot 2s ease-in-out infinite;
+  }
+
+  .cta-shimmer {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  .cta-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: -20% auto -20% -40%;
+    width: 38%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+    opacity: 0.7;
+    animation: shimmerSweep 4.8s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .cta-image-fade {
+    -webkit-mask-image: linear-gradient(to bottom, black 74%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 74%, transparent 100%);
+  }
+
+  .whatsapp-fab {
+    animation: whatsappPulse 2.8s ease-in-out infinite;
   }
 }
