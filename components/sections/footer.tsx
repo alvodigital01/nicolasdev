@@ -7,17 +7,17 @@ export function Footer() {
       <Container className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="font-brand text-2xl font-semibold tracking-[0.04em] text-white">Nicolas Lucas</p>
-          <p className="mt-2 text-sm text-textMuted">Desenvolvedor web para marcas que querem presença digital profissional.</p>
+          <p className="mt-2 text-sm text-textMuted">Paginas mais objetivas, visuais e pensadas para gerar conversa.</p>
         </div>
         <div className="flex flex-wrap items-center gap-5 text-sm text-textMuted">
           <Link href="#servicos" className="transition hover:text-white">
-            Serviços
+            Oferta
           </Link>
           <Link href="#portfolio" className="transition hover:text-white">
-            Portfólio
+            Projetos
           </Link>
-          <Link href="#processo" className="transition hover:text-white">
-            Processo
+          <Link href="#cta" className="transition hover:text-white">
+            Contato
           </Link>
           <Link href="https://instagram.com/nicolasdev_oficial" className="transition hover:text-white">
             Instagram
@@ -30,4 +30,3 @@ export function Footer() {
     </footer>
   );
 }
-

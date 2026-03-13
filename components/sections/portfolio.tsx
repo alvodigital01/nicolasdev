@@ -1,54 +1,30 @@
 "use client";
 
 import Image from "next/image";
-import { projects, ProjectCategory } from "@/data/site";
+import { projects } from "@/data/site";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-import { useMemo, useState } from "react";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionHeading } from "../ui/section-heading";
 import { SectionShell } from "../ui/section-shell";
 
-const categories: Array<ProjectCategory | "Todos"> = ["Todos", "Landing Page", "Institucional", "Portfólio", "Conversão"];
-
 export function PortfolioSection() {
-  const [active, setActive] = useState<(typeof categories)[number]>("Todos");
-
-  const filteredProjects = useMemo(() => {
-    if (active === "Todos") return projects;
-    return projects.filter((project) => project.category === active);
-  }, [active]);
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <SectionShell id="portfolio">
       <Container className="space-y-10">
         <Reveal>
           <SectionHeading
-            eyebrow="Portfólio em destaque"
-            title="Projetos que elevam presença digital e destravam novas oportunidades"
-            description="Cada projeto abaixo foi pensado para unir sofisticação visual, clareza estratégica e foco em conversão."
+            eyebrow="Projetos em destaque"
+            title="Menos volume, mais prova visual"
+            description="Em vez de uma galeria longa, a home mostra apenas alguns exemplos que deixam claro o nivel de acabamento e foco comercial."
           />
         </Reveal>
 
-        <Reveal delay={0.08} className="flex flex-wrap gap-3">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setActive(category)}
-              className={`rounded-full border px-4 py-2 text-xs uppercase tracking-[0.16em] transition ${
-                active === category
-                  ? "border-accent/60 bg-accent/15 text-accentSoft"
-                  : "border-white/15 bg-white/[0.03] text-textMuted hover:border-white/30 hover:text-white"
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </Reveal>
-
         <motion.div layout className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {filteredProjects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <motion.article
               layout
               key={project.name}
@@ -77,7 +53,7 @@ export function PortfolioSection() {
               <p className="mt-3 text-sm leading-relaxed text-textMuted">{project.description}</p>
               <p className="mt-4 text-sm font-medium text-accentSoft">{project.metrics}</p>
               <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-textMuted">
-                Projeto disponível sob solicitação <ArrowUpRight className="h-4 w-4" />
+                Referencia sob solicitacao <ArrowUpRight className="h-4 w-4" />
               </span>
               <span className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-accent/0 transition group-hover:ring-accent/25" />
             </motion.article>

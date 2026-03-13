@@ -11,15 +11,15 @@ export function DifferentialsSection() {
       <Container className="space-y-10">
         <Reveal>
           <SectionHeading
-            eyebrow="Diferenciais"
-            title="Sites modernos com acabamento premium e foco real em resultado"
-            description="Cada etapa é pensada para combinar design sofisticado, experiência responsiva e performance otimizada."
+            eyebrow="Por que vende melhor"
+            title="A estrutura foi enxugada para o visitante entender, confiar e agir"
+            description="Essa nova organizacao prioriza leitura rapida, menos distracao e mais intencao de contato."
           />
         </Reveal>
         <div className="grid gap-4 md:grid-cols-2">
           {differentials.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>
-              <article className="flex gap-4 rounded-2xl border border-white/10 bg-panel/70 p-5 backdrop-blur-sm transition duration-300 hover:border-accent/40">
+              <article className="flex gap-4 rounded-3xl border border-white/10 bg-panel/70 p-6 backdrop-blur-sm transition duration-300 hover:border-accent/40">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accentSoft" />
                 <div>
                   <h3 className="font-display text-lg text-white">{item.title}</h3>
@@ -33,4 +33,3 @@ export function DifferentialsSection() {
     </SectionShell>
   );
 }
-

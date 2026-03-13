@@ -15,7 +15,7 @@ export type Differential = {
   description: string;
 };
 
-export type ProjectCategory = "Landing Page" | "Institucional" | "Portfólio" | "Conversão";
+export type ProjectCategory = "Landing Page" | "Institucional" | "Portfolio" | "Conversao";
 
 export type Project = {
   name: string;
@@ -43,68 +43,49 @@ export type FAQ = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "Início", href: "#inicio" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Portfólio", href: "#portfolio" },
-  { label: "Processo", href: "#processo" },
-  { label: "FAQ", href: "#faq" }
+  { label: "Inicio", href: "#inicio" },
+  { label: "Oferta", href: "#servicos" },
+  { label: "Projetos", href: "#portfolio" },
+  { label: "Contato", href: "#cta" }
 ];
 
 export const services: Service[] = [
   {
-    title: "Landing Pages",
-    description: "Páginas estratégicas para campanhas, lançamentos e captação de leads com foco total em conversão.",
+    title: "Landing page para anuncio",
+    description: "Pagina curta e forte para transformar clique em lead, conversa ou pedido de orcamento.",
     icon: "rocket",
     image: "/images/services/landing.png"
   },
   {
-    title: "Sites Institucionais",
-    description: "Estrutura profissional para empresas que precisam transmitir credibilidade e vender mais no digital.",
+    title: "Site comercial para servico",
+    description: "Estrutura enxuta para apresentar oferta, transmitir confianca e facilitar a decisao do cliente.",
     icon: "layout",
     image: "/images/services/institucional.png"
   },
   {
-    title: "Portfólios Profissionais",
-    description: "Apresentações premium para marcas pessoais e especialistas que querem parecer referência no mercado.",
-    icon: "briefcase",
-    image: "/images/services/portfolio.png"
-  },
-  {
-    title: "Páginas de Campanha",
-    description: "Páginas de alta performance com copy orientada a resultado e design pensado para ação.",
+    title: "Pagina de vendas ou captura",
+    description: "Blocos pensados para destacar valor, reduzir objecao e levar o visitante para a acao.",
     icon: "megaphone",
-    image: "/images/services/campanhas.png"
-  },
-  {
-    title: "Sites Responsivos",
-    description: "Experiência impecável em celular, tablet e desktop com carregamento otimizado e visual moderno.",
-    icon: "smartphone",
-    image: "/images/services/responsivo.png"
-  },
-  {
-    title: "Página de Vendas",
-    description: "Estruturas de oferta com copy, prova e CTA para aumentar pedidos de orçamento.",
-    icon: "shield",
     image: "/images/services/vendas.png"
   }
 ];
 
 export const differentials: Differential[] = [
   {
-    title: "Design que transmite autoridade",
-    description: "Cada layout é construído para valorizar marca, posicionamento e percepção premium."
+    title: "Menos texto, mais direcao",
+    description: "A oferta aparece rapido e o visitante entende o que fazer sem atravessar uma pagina institucional."
   },
   {
-    title: "Estratégia orientada à conversão",
-    description: "Arquitetura de conteúdo e CTAs para gerar mais contatos e oportunidades reais."
+    title: "CTA no momento certo",
+    description: "Os pontos de contato entram cedo e se repetem com criterio para gerar mais conversa."
   },
   {
-    title: "Performance e experiência",
-    description: "Sites rápidos, responsivos e fluidos para não perder atenção nem vendas."
+    title: "Prova visual primeiro",
+    description: "Projetos e sinais de resultado sustentam valor sem depender de longas explicacoes."
   },
   {
-    title: "Acabamento de alto nível",
-    description: "Microinterações, hierarquia visual e detalhes sofisticados que elevam o valor percebido."
+    title: "Design premium com foco comercial",
+    description: "O visual continua forte, mas agora trabalha para vender e nao so para parecer bonito."
   }
 ];
 
@@ -112,39 +93,39 @@ export const projects: Project[] = [
   {
     name: "Aurora Odonto",
     category: "Institucional",
-    description: "Reposicionamento digital para clínica premium com agendamento simplificado.",
-    metrics: "+38% em contatos no primeiro mês",
+    description: "Clinica premium com pagina mais limpa, confiavel e orientada a agendamento.",
+    metrics: "+38% em contatos no primeiro mes",
     image: "/images/projects/aurora-odonto.svg",
     href: "#"
   },
   {
     name: "Matriz Fitness",
     category: "Landing Page",
-    description: "Landing de campanha para plano anual com estrutura focada em tráfego pago.",
-    metrics: "Custo por lead 29% menor",
+    description: "Campanha digital com oferta forte e leitura rapida para trafego pago.",
+    metrics: "Lead 29% mais barato",
     image: "/images/projects/matriz-fitness.svg",
     href: "#"
   },
   {
     name: "Luna Arquitetura",
-    category: "Portfólio",
-    description: "Portfólio minimalista para estúdio autoral reforçando percepção de exclusividade.",
-    metrics: "Tempo de permanência 2.1x maior",
+    category: "Portfolio",
+    description: "Portfolio autoral com percepcao premium e narrativa visual mais valorizada.",
+    metrics: "Permanencia 2.1x maior",
     image: "/images/projects/luna-arquitetura.svg",
     href: "#"
   },
   {
     name: "Prime Legal",
-    category: "Conversão",
-    description: "Página de aquisição para escritório com prova social e funil de atendimento.",
-    metrics: "+52% em solicitações de consulta",
+    category: "Conversao",
+    description: "Pagina juridica com prova social e CTA direto para solicitacao de consulta.",
+    metrics: "+52% em solicitacoes",
     image: "/images/projects/prime-legal.svg",
     href: "#"
   },
   {
-    name: "Vittori Imóveis",
+    name: "Vittori Imoveis",
     category: "Institucional",
-    description: "Site moderno para imobiliária com vitrine premium e captura inteligente de leads.",
+    description: "Site comercial com vitrine premium e captura mais clara de leads.",
     metrics: "+44% de leads qualificados",
     image: "/images/projects/vittori-imoveis.svg",
     href: "#"
@@ -152,8 +133,8 @@ export const projects: Project[] = [
   {
     name: "Creator Sprint",
     category: "Landing Page",
-    description: "Lançamento digital com narrativa persuasiva e blocos de objeção/resposta.",
-    metrics: "Taxa de conversão de 8.7%",
+    description: "Estrutura de lancamento com narrativa persuasiva e CTA distribuido com precisao.",
+    metrics: "Conversao de 8.7%",
     image: "/images/projects/creator-sprint.svg",
     href: "#"
   }
@@ -161,38 +142,38 @@ export const projects: Project[] = [
 
 export const processSteps: ProcessStep[] = [
   {
-    title: "Briefing Estratégico",
-    description: "Entendo objetivos, público e momento do negócio para direcionar o projeto com clareza."
+    title: "Briefing Estrategico",
+    description: "Entendo objetivos, publico e momento do negocio para direcionar o projeto com clareza."
   },
   {
-    title: "Arquitetura e Direção",
+    title: "Arquitetura e Direcao",
     description: "Defino estrutura, narrativa e posicionamento visual para comunicar valor desde o primeiro bloco."
   },
   {
     title: "Design e Desenvolvimento",
-    description: "Construo a interface com foco em percepção premium, performance e experiência responsiva."
+    description: "Construo a interface com foco em percepcao premium, performance e experiencia responsiva."
   },
   {
     title: "Entrega e Ajustes",
-    description: "Validação final, refinamentos estratégicos e publicação para seu site entrar em operação forte."
+    description: "Validacao final, refinamentos estrategicos e publicacao para seu site entrar em operacao forte."
   }
 ];
 
 export const testimonials: Testimonial[] = [
   {
     name: "Marina Costa",
-    role: "CEO, Studio Móveis Planejados",
-    quote: "O site elevou completamente nossa imagem. Hoje os clientes chegam dizendo que a marca parece outro nível."
+    role: "CEO, Studio Moveis Planejados",
+    quote: "O site elevou completamente nossa imagem. Hoje os clientes chegam dizendo que a marca parece outro nivel."
   },
   {
     name: "Rafael Mendes",
     role: "Gestor, Prime Car Detail",
-    quote: "A estrutura foi pensada para converter de verdade. O volume de orçamentos aumentou já na primeira semana."
+    quote: "A estrutura foi pensada para converter de verdade. O volume de orcamentos aumentou ja na primeira semana."
   },
   {
     name: "Camila Torres",
-    role: "Mentora de Negócios",
-    quote: "Finalmente tenho uma presença digital profissional que combina com o valor do meu serviço."
+    role: "Mentora de Negocios",
+    quote: "Finalmente tenho uma presenca digital profissional que combina com o valor do meu servico."
   }
 ];
 
@@ -203,18 +184,18 @@ export const faqs: FAQ[] = [
   },
   {
     question: "O site funciona bem no celular?",
-    answer: "Sim. O desenvolvimento é mobile first para garantir leitura, performance e conversão em qualquer dispositivo."
+    answer: "Sim. O desenvolvimento e mobile first para garantir leitura, performance e conversao em qualquer dispositivo."
   },
   {
-    question: "Posso pedir alterações após a entrega?",
-    answer: "Sim. O projeto inclui rodada de ajustes estratégicos para garantir alinhamento com sua marca e objetivos."
+    question: "Posso pedir alteracoes apos a entrega?",
+    answer: "Sim. O projeto inclui rodada de ajustes estrategicos para garantir alinhamento com sua marca e objetivos."
   },
   {
-    question: "Você também faz landing pages?",
-    answer: "Sim. Landing pages são um dos focos principais para campanhas, tráfego pago e captação de leads."
+    question: "Voce tambem faz landing pages?",
+    answer: "Sim. Landing pages sao um dos focos principais para campanhas, trafego pago e captacao de leads."
   },
   {
-    question: "Como funciona o orçamento?",
-    answer: "Você envia os objetivos do projeto e recebe uma proposta clara com escopo, prazo e investimento."
+    question: "Como funciona o orcamento?",
+    answer: "Voce envia os objetivos do projeto e recebe uma proposta clara com escopo, prazo e investimento."
   }
 ];
