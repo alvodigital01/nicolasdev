@@ -107,12 +107,12 @@ export const projects: Project[] = [
     href: "#"
   },
   {
-    name: "Luna Arquitetura",
-    category: "Portfolio",
-    description: "Portfolio autoral com percepcao premium e narrativa visual mais valorizada.",
-    metrics: "Permanencia 2.1x maior",
+    name: "Luare Recreacoes",
+    category: "Institucional",
+    description: "Site comercial com visual leve, CTA forte no WhatsApp e foco em eventos infantis e corporativos.",
+    metrics: "CTA principal logo na abertura",
     image: "/images/projects/luna-arquitetura.svg",
-    href: "#"
+    href: "https://www.luarerecreacoes.com.br"
   },
   {
     name: "Prime Legal",
