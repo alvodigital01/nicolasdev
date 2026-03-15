@@ -12,7 +12,8 @@ export default function HomePage() {
     <>
       <Navbar />
       <main className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_75%_20%,rgba(78,161,255,0.14),transparent_32%),radial-gradient(circle_at_15%_70%,rgba(126,192,255,0.12),transparent_30%)]" />
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_78%_16%,rgba(78,161,255,0.22),transparent_28%),radial-gradient(circle_at_12%_68%,rgba(126,192,255,0.16),transparent_26%),radial-gradient(circle_at_46%_38%,rgba(35,104,255,0.12),transparent_30%)]" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[linear-gradient(180deg,rgba(96,170,255,0.08),transparent)]" />
         <HeroSection />
         <TrustMarqueeSection />
         <ServicesSection />

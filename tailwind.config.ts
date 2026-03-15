@@ -22,7 +22,7 @@ const config: Config = {
         brand: ["var(--font-playfair)", "serif"]
       },
       backgroundImage: {
-        "hero-glow": "radial-gradient(circle at 20% 20%, rgba(78,161,255,0.28) 0%, rgba(7,10,18,0) 55%), radial-gradient(circle at 85% 15%, rgba(126,192,255,0.2) 0%, rgba(7,10,18,0) 40%)",
+        "hero-glow": "radial-gradient(circle at 16% 18%, rgba(78,161,255,0.52) 0%, rgba(78,161,255,0.2) 24%, rgba(7,10,18,0) 58%), radial-gradient(circle at 84% 14%, rgba(126,192,255,0.34) 0%, rgba(126,192,255,0.12) 20%, rgba(7,10,18,0) 42%), radial-gradient(circle at 62% 42%, rgba(26,92,255,0.18) 0%, rgba(7,10,18,0) 38%)",
         "grid-fade": "linear-gradient(rgba(168,178,204,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(168,178,204,0.06) 1px, transparent 1px)"
       },
       boxShadow: {

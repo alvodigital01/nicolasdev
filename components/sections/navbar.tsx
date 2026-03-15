@@ -23,8 +23,8 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-white/10 bg-[rgba(10,15,26,0.62)] shadow-[0_16px_40px_-30px_rgba(0,0,0,0.95)] backdrop-blur-2xl"
-          : "bg-transparent"
+          ? "border-b border-white/10 bg-[rgba(10,15,26,0.72)] shadow-[0_16px_40px_-30px_rgba(0,0,0,0.95)] backdrop-blur-2xl"
+          : "border-b border-white/[0.03] bg-[linear-gradient(180deg,rgba(6,10,18,0.82),rgba(6,10,18,0.38))] backdrop-blur-xl"
       )}
       initial={{ y: -64, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}

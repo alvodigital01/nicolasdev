@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, MessageCircle } from "lucide-react";
-import { MouseEvent, useState } from "react";
 import { Container } from "../ui/container";
 import { PremiumButton } from "../ui/premium-button";
 
@@ -16,24 +15,23 @@ const stats = [
 export function HeroSection() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 360], [0, 36]);
-  const [tilt, setTilt] = useState({ rotateX: 0, rotateY: 0 });
-
-  const handlePointerMove = (event: MouseEvent<HTMLDivElement>) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const offsetX = (event.clientX - rect.left) / rect.width;
-    const offsetY = (event.clientY - rect.top) / rect.height;
-    const rotateY = (offsetX - 0.5) * 12;
-    const rotateX = (0.5 - offsetY) * 12;
-
-    setTilt({ rotateX, rotateY });
-  };
-
-  const resetTilt = () => setTilt({ rotateX: 0, rotateY: 0 });
-
   return (
-    <section id="inicio" className="relative overflow-hidden pt-24 lg:pt-28">
-      <div className="pointer-events-none absolute inset-0 bg-hero-glow" />
-      <div className="pointer-events-none absolute inset-0 bg-grid-fade [background-size:46px_46px] opacity-[0.14]" />
+    <section id="inicio" className="relative overflow-hidden pt-28 lg:pt-32">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-20 lg:top-24">
+        <Image
+          src="/images/fundohero.png"
+          alt=""
+          fill
+          priority
+          quality={100}
+          unoptimized
+          className="object-cover object-[72%_18%] md:object-[74%_20%] lg:object-[76%_22%]"
+          sizes="100vw"
+        />
+      </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-20 lg:top-24 bg-[linear-gradient(90deg,rgba(4,8,16,0.64)_0%,rgba(5,10,19,0.42)_30%,rgba(7,12,22,0.1)_58%,rgba(7,12,22,0.16)_100%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-20 lg:top-24 bg-[radial-gradient(circle_at_18%_26%,rgba(126,192,255,0.08),transparent_28%),radial-gradient(circle_at_78%_28%,rgba(126,192,255,0.06),transparent_24%)]" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 top-20 lg:top-24 bg-grid-fade [background-size:46px_46px] opacity-[0.04]" />
       <Container className="relative grid gap-10 pb-14 lg:min-h-[calc(100svh-5.5rem)] lg:grid-cols-[0.94fr_0.9fr] lg:items-center xl:gap-12">
         <motion.div style={{ y }} className="relative space-y-6 lg:pr-4 xl:space-y-7">
           <motion.div
@@ -119,49 +117,6 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          className="relative lg:pl-4"
-          initial={{ opacity: 0, y: 24, scale: 0.96 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className="pointer-events-none absolute left-6 top-12 h-32 w-32 rounded-full bg-accent/18 blur-[85px]" />
-          <div className="pointer-events-none absolute right-6 top-1/2 h-[320px] w-[320px] -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(77,191,255,0.38)_0%,rgba(78,161,255,0.22)_35%,transparent_72%)] blur-[110px]" />
-
-          <div
-            className="relative mx-auto w-full max-w-[420px] [perspective:1400px] lg:max-w-[520px] xl:max-w-[560px]"
-            onMouseMove={handlePointerMove}
-            onMouseLeave={resetTilt}
-          >
-            <motion.div
-              className="relative rounded-[30px] bg-[rgba(255,255,255,0.02)] p-3 shadow-[0_0_60px_rgba(59,130,246,0.18),0_28px_90px_-40px_rgba(0,0,0,0.95)] backdrop-blur-[10px]"
-              animate={{ rotateX: tilt.rotateX, rotateY: tilt.rotateY }}
-              transition={{ type: "spring", stiffness: 140, damping: 14, mass: 0.6 }}
-              style={{ transformStyle: "preserve-3d" }}
-            >
-              <div className="relative h-[420px] overflow-hidden rounded-[26px] bg-[#09111d] sm:h-[470px] lg:h-[520px] xl:h-[560px]" style={{ transform: "translateZ(24px)" }}>
-                <Image
-                  src="/images/hero-nicolas.png"
-                  alt="Nicolas Lucas, desenvolvedor web"
-                  width={2160}
-                  height={2700}
-                  priority
-                  quality={100}
-                  unoptimized
-                  className="h-full w-full object-cover object-top"
-                  sizes="(max-width: 1024px) 420px, (max-width: 1440px) 520px, 560px"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(5,11,22,0.08),rgba(6,10,18,0.72))]" />
-                <div className="pointer-events-none absolute inset-0 rounded-[26px] shadow-[inset_0_0_80px_rgba(3,8,16,0.45)]" />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-36 bg-[linear-gradient(to_top,rgba(7,10,18,0.88),transparent)]" />
-              </div>
-
-              <div className="floating-glass absolute bottom-5 right-4 z-10 rounded-full border border-white/15 bg-[rgba(10,18,32,0.42)] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-accentSoft shadow-[0_18px_45px_-24px_rgba(78,161,255,0.85)] backdrop-blur-2xl sm:right-5">
-                Estrutura focada em venda
-              </div>
-            </motion.div>
-          </div>
-        </motion.div>
       </Container>
     </section>
   );
