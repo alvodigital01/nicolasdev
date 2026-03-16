@@ -7,25 +7,25 @@ const benefits = [
   {
     title: "Mais valor percebido",
     description:
-      "Quando sua oferta parece mais profissional, o cliente entende melhor o valor e aceita pagar mais facil.",
+      "Quando sua oferta parece mais profissional, o cliente entende melhor o valor e aceita pagar mais fácil.",
     icon: CircleGauge
   },
   {
     title: "Mais cliques em contato",
     description:
-      "Os CTAs entram no ponto certo para transformar interesse em mensagem, pedido de orcamento e conversa comercial.",
+      "Os CTAs entram no ponto certo para transformar interesse em mensagem, pedido de orçamento e conversa comercial.",
     icon: MousePointerSquareDashed
   },
   {
-    title: "Mais confianca antes da venda",
+    title: "Mais confiança antes da venda",
     description:
-      "O visual e a apresentacao reduzem desconfianca e deixam o cliente mais pronto para fechar com voce.",
+      "O visual e a apresentação reduzem desconfiança e deixam o cliente mais pronto para fechar com você.",
     icon: Eye
   },
   {
     title: "Design que ajuda a lucrar",
     description:
-      "Nao e so um site bonito. E uma presenca pensada para aumentar desejo, justificar preco e apoiar seu faturamento.",
+      "Não é só um site bonito. É uma presença pensada para aumentar desejo, justificar preço e apoiar seu faturamento.",
     icon: Sparkles
   }
 ];
@@ -33,7 +33,6 @@ const benefits = [
 export function DifferentialsSection() {
   return (
     <SectionShell id="diferenciais" className="py-16 md:py-20">
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,rgba(34,84,160,0.16),transparent_48%)]" />
       <Container className="space-y-10">
         <Reveal>
           <div className="max-w-3xl space-y-4">
@@ -41,14 +40,14 @@ export function DifferentialsSection() {
               Por que vende melhor
             </span>
             <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
-              Seu site precisa aumentar a percepcao de valor e{" "}
+              Seu site precisa aumentar a percepção de valor e{" "}
               <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
-                ajudar seu negocio a lucrar mais
+                ajudar seu negócio a lucrar mais
               </span>
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
-              Quando a mensagem fica clara, o visual transmite confianca e o contato vem facil,
-              vender deixa de ser mais dificil do que precisa.
+              Quando a mensagem fica clara, o visual transmite confiança e o contato vem fácil,
+              vender deixa de ser mais difícil do que precisa.
             </p>
           </div>
         </Reveal>
@@ -84,3 +83,5 @@ export function DifferentialsSection() {
     </SectionShell>
   );
 }
+
+

@@ -1,4 +1,4 @@
-import { testimonials } from "@/data/site";
+﻿import { testimonials } from "@/data/site";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionHeading } from "../ui/section-heading";
@@ -11,8 +11,8 @@ export function TestimonialsSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Prova social"
-            title="Quando o site transmite mais valor, vender fica muito mais facil"
-            description="Espaco pronto para mostrar feedbacks reais e reforcar que uma presenca profissional ajuda a gerar mais confianca, mais pedidos e mais conversas comerciais."
+            title="Quando o site transmite mais valor, vender fica muito mais fácil"
+            description="Espaço pronto para mostrar feedbacks reais e reforçar que uma presença profissional ajuda a gerar mais confiança, mais pedidos e mais conversas comerciais."
           />
         </Reveal>
         <div className="grid gap-5 md:grid-cols-3">
@@ -32,3 +32,4 @@ export function TestimonialsSection() {
     </SectionShell>
   );
 }
+

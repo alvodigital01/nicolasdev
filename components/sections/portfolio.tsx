@@ -9,18 +9,19 @@ import { SectionShell } from "../ui/section-shell";
 
 const featuredProjects = [
   {
-    name: "Aurora Odonto",
+    name: "Fred Peças",
     category: "Institucional",
-    description: "Clinica premium com pagina mais limpa, confiavel e orientada a agendamento.",
-    metrics: "+38% em contatos no primeiro mes",
-    accent: "from-sky-400/30 via-cyan-300/10 to-transparent",
-    href: "#cta"
+    description: "Site comercial com CTA no WhatsApp, foco em estoque e atendimento para linha 12V e 24V.",
+    metrics: "Catálogo e consultoria",
+    accent: "from-[#ef4444]/20 via-[#1d4ed8]/16 to-transparent",
+    href: "https://fred-pe-as.vercel.app",
+    variant: "fred" as const
   },
   {
     name: "DR Drywall",
     category: "Institucional",
-    description: "Site premium para drywall residencial e corporativo, com foco em autoridade visual e pedido de orcamento.",
-    metrics: "Hero com CTA direto para orcamento",
+    description: "Site premium para drywall residencial e corporativo, com foco em autoridade visual e pedido de orçamento.",
+    metrics: "Orcamento direto",
     accent: "from-white/12 via-stone-300/10 to-transparent",
     href: "https://drywal-dr.vercel.app",
     variant: "drywall" as const
@@ -29,14 +30,76 @@ const featuredProjects = [
     name: "Luarê Recreações",
     category: "Institucional",
     description: "Site leve com CTA no WhatsApp e foco em eventos infantis e corporativos.",
-    metrics: "Hero com foco direto em orcamento",
+    metrics: "WhatsApp em destaque",
     accent: "from-[#ffb320]/20 via-[#b9dfff]/22 to-transparent",
     href: "https://luarerecreacoes.com.br/",
     variant: "luare" as const
   }
 ];
 
-function ProjectMockup({ accent, variant = "default" }: { accent: string; variant?: "default" | "luare" | "drywall" }) {
+function ProjectMockup({ accent, variant = "default" }: { accent: string; variant?: "default" | "luare" | "drywall" | "fred" }) {
+  if (variant === "fred") {
+    return (
+      <div className="relative h-52 overflow-hidden rounded-[28px] bg-[linear-gradient(135deg,#1b3d74_0%,#2e4d7f_45%,#54415f_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
+        <div className={`absolute inset-0 bg-gradient-to-br ${accent}`} />
+        <div className="absolute inset-x-0 top-0 h-11 bg-[#183158] shadow-[inset_0_-1px_0_rgba(255,255,255,0.08)]" />
+        <div className="absolute left-4 top-3 flex items-center gap-3">
+          <div className="rounded-xl bg-[#ef2020] px-2.5 py-1 text-[10px] font-black tracking-[0.12em] text-white">
+            FRED
+          </div>
+          <div>
+            <div className="h-3 w-24 rounded-full bg-white/85" />
+            <div className="mt-1 h-2 w-16 rounded-full bg-white/30" />
+          </div>
+        </div>
+        <div className="absolute right-4 top-3 flex gap-2">
+          <div className="h-3 w-10 rounded-full bg-white/14" />
+          <div className="h-3 w-12 rounded-full bg-white/14" />
+          <div className="h-3 w-14 rounded-full bg-white/14" />
+        </div>
+        <div className="absolute left-5 top-16 w-[47%]">
+          <div className="h-3 w-28 rounded-full bg-[#f6b4b4]/90" />
+          <div className="mt-4 h-8 w-40 rounded-full bg-white/95" />
+          <div className="mt-3 h-8 w-44 rounded-full bg-white/95" />
+          <div className="mt-3 h-8 w-36 rounded-full bg-white/95" />
+          <div className="mt-4 space-y-2">
+            <div className="h-2.5 w-full rounded-full bg-white/22" />
+            <div className="h-2.5 w-[90%] rounded-full bg-white/22" />
+          </div>
+          <div className="mt-5 flex gap-3">
+            <div className="h-9 w-32 rounded-full bg-[#ef2020] shadow-[0_8px_24px_rgba(239,32,32,0.28)]" />
+            <div className="h-9 w-28 rounded-full border border-white/25 bg-white/[0.03]" />
+          </div>
+        </div>
+        <div className="absolute bottom-4 right-4 top-16 w-[40%] rounded-[28px] border border-white/12 bg-[linear-gradient(180deg,rgba(255,255,255,0.15),rgba(255,255,255,0.04))] p-3 backdrop-blur-sm">
+          <div className="grid h-[72%] grid-cols-2 gap-3">
+            <div className="rounded-[18px] bg-[#273859]/85 p-3">
+              <div className="h-3 w-14 rounded-full bg-white/85" />
+              <div className="mt-3 h-2.5 w-20 rounded-full bg-white/25" />
+              <div className="mt-1.5 h-2.5 w-16 rounded-full bg-white/25" />
+            </div>
+            <div className="rounded-[18px] bg-[#273859]/85 p-3">
+              <div className="h-3 w-14 rounded-full bg-white/85" />
+              <div className="mt-3 h-2.5 w-20 rounded-full bg-white/25" />
+              <div className="mt-1.5 h-2.5 w-16 rounded-full bg-white/25" />
+            </div>
+            <div className="rounded-[18px] bg-[#273859]/85 p-3">
+              <div className="h-3 w-14 rounded-full bg-white/85" />
+              <div className="mt-3 h-2.5 w-20 rounded-full bg-white/25" />
+              <div className="mt-1.5 h-2.5 w-16 rounded-full bg-white/25" />
+            </div>
+            <div className="rounded-[18px] bg-[#273859]/85 p-3">
+              <div className="h-3 w-14 rounded-full bg-white/85" />
+              <div className="mt-3 h-2.5 w-20 rounded-full bg-white/25" />
+              <div className="mt-1.5 h-2.5 w-16 rounded-full bg-white/25" />
+            </div>
+          </div>
+          <div className="mt-3 h-9 rounded-full bg-white shadow-[0_10px_28px_rgba(255,255,255,0.18)]" />
+        </div>
+      </div>
+    );
+  }
+
   if (variant === "luare") {
     return (
       <div className="relative h-52 overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#f7fbff_0%,#eef6ff_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]">
@@ -148,7 +211,7 @@ export function PortfolioSection() {
               Projetos em destaque
             </span>
             <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
-              Exemplos de paginas pensadas para gerar mais valor percebido e{" "}
+              Exemplos de páginas pensadas para gerar mais valor percebido e{" "}
               <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
                 trazer mais pedidos
               </span>
@@ -196,20 +259,20 @@ export function PortfolioSection() {
                     </div>
 
                     <p
-                      className="relative mt-3 text-sm leading-relaxed text-textMuted md:text-base"
+                      className={`relative mt-3 text-sm leading-relaxed text-textMuted md:text-base ${project.variant === "luare" ? "min-h-[48px] md:min-h-[52px]" : "min-h-[72px] md:min-h-[78px]"}`}
                       style={{
                         display: "-webkit-box",
                         WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
+                        WebkitLineClamp: project.variant === "luare" ? 2 : 3,
                         overflow: "hidden"
                       }}
                     >
                       {project.description}
                     </p>
 
-                    <div className="relative mt-auto inline-flex items-center gap-2 rounded-full bg-[rgba(61,182,255,0.08)] px-3 py-1.5 text-sm font-medium text-[#9ddbff] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-                      <TrendingUp className="h-4 w-4" />
-                      <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#DDF4FF_100%)] bg-clip-text text-transparent">
+                    <div className="relative mt-4 inline-flex max-w-full items-center gap-2 rounded-full bg-[rgba(61,182,255,0.08)] px-3 py-1.5 text-sm font-medium text-[#9ddbff] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                      <TrendingUp className="h-4 w-4 shrink-0" />
+                      <span className="truncate whitespace-nowrap bg-[linear-gradient(135deg,#8DD3FF_0%,#DDF4FF_100%)] bg-clip-text text-transparent">
                         {project.metrics}
                       </span>
                     </div>
@@ -228,6 +291,8 @@ export function PortfolioSection() {
     </SectionShell>
   );
 }
+
+
 
 
 

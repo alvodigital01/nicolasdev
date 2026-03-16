@@ -1,4 +1,4 @@
-import { processSteps } from "@/data/site";
+﻿import { processSteps } from "@/data/site";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionHeading } from "../ui/section-heading";
@@ -11,8 +11,8 @@ export function ProcessSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Processo"
-            title="Um processo rapido para colocar no ar um site que apoia vendas e crescimento"
-            description="Cada etapa existe para tirar seu projeto do papel com velocidade e transformar sua presenca digital em uma ferramenta de faturamento."
+            title="Um processo rápido para colocar no ar um site que apoia vendas e crescimento"
+            description="Cada etapa existe para tirar seu projeto do papel com velocidade e transformar sua presença digital em uma ferramenta de faturamento."
           />
         </Reveal>
         <div className="relative grid gap-5 md:grid-cols-2">
@@ -33,3 +33,4 @@ export function ProcessSection() {
     </SectionShell>
   );
 }
+

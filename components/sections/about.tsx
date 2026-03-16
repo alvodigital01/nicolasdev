@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionHeading } from "../ui/section-heading";
@@ -12,7 +12,7 @@ export function AboutSection() {
           <SectionHeading
             eyebrow="Posicionamento"
             title="Seu site pode aumentar seu valor percebido antes mesmo da primeira conversa"
-            description="Sou Nicolas Lucas, desenvolvedor web focado em criar paginas que fazem sua marca parecer mais forte, transmitir confianca e ajudar seu negocio a vender melhor."
+            description="Sou Nicolas Lucas, desenvolvedor web focado em criar páginas que fazem sua marca parecer mais forte, transmitir confiança e ajudar seu negócio a vender melhor."
           />
         </Reveal>
         <Reveal delay={0.15}>
@@ -29,7 +29,7 @@ export function AboutSection() {
                 />
               </div>
               <p className="text-sm leading-relaxed text-textMuted md:text-base">
-                Meu trabalho une direcao visual premium, oferta bem apresentada e desenvolvimento moderno para transformar seu site em uma ferramenta de autoridade e vendas. A ideia nao e so ficar bonito, mas fazer o cliente enxergar mais valor e chegar mais pronto para fechar.
+                Meu trabalho une direção visual premium, oferta bem apresentada e desenvolvimento moderno para transformar seu site em uma ferramenta de autoridade e vendas. A ideia não é só ficar bonito, mas fazer o cliente enxergar mais valor e chegar mais pronto para fechar.
               </p>
             </div>
           </div>
@@ -38,3 +38,4 @@ export function AboutSection() {
     </SectionShell>
   );
 }
+

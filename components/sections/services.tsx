@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { MouseEvent } from "react";
@@ -9,20 +9,20 @@ import { SectionShell } from "../ui/section-shell";
 
 const offers = [
   {
-    title: "Landing pages para anuncios",
-    description: "Paginas estrategicas para transformar clique em lead, conversa ou pedido de orcamento.",
+    title: "Landing pages para anúncios",
+    description: "Páginas estratégicas para transformar clique em lead, conversa ou pedido de orçamento.",
     icon: Rocket,
     href: "#cta"
   },
   {
-    title: "Sites comerciais para servicos",
-    description: "Sites pensados para valorizar sua oferta, acelerar a decisao e gerar mais pedidos.",
+    title: "Sites comerciais para serviços",
+    description: "Sites pensados para valorizar sua oferta, acelerar a decisão e gerar mais pedidos.",
     icon: LayoutTemplate,
     href: "#cta"
   },
   {
-    title: "Paginas de vendas e captura",
-    description: "Blocos criados para aumentar desejo, reduzir objecao e puxar o visitante para a acao.",
+    title: "Páginas de vendas e captura",
+    description: "Blocos criados para aumentar desejo, reduzir objeção e puxar o visitante para a ação.",
     icon: Megaphone,
     href: "#cta"
   }
@@ -50,12 +50,12 @@ export function ServicesSection() {
             <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
               Sites feitos para atrair mais pedidos, aumentar seu valor percebido e{" "}
               <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
-                ajudar voce a faturar mais
+                ajudar você a faturar mais
               </span>
               .
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
-              Seu site nao pode so existir. Ele precisa vender sua oferta, transmitir confianca rapido e fazer mais gente chegar pronta para pedir orcamento.
+              Seu site não pode só existir. Ele precisa vender sua oferta, transmitir confiança rápido e fazer mais gente chegar pronta para pedir orçamento.
             </p>
           </div>
         </Reveal>
@@ -99,3 +99,4 @@ export function ServicesSection() {
     </SectionShell>
   );
 }
+

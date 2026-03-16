@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -18,8 +18,6 @@ export function HeroSection() {
 
   return (
     <section id="inicio" className="relative overflow-hidden pt-24 lg:pt-28">
-      <div className="pointer-events-none absolute inset-0 bg-hero-glow" />
-      <div className="pointer-events-none absolute inset-0 bg-grid-fade [background-size:46px_46px] opacity-[0.14]" />
       <Container className="relative grid gap-10 pb-14 lg:min-h-[calc(100svh-5.5rem)] lg:grid-cols-[0.94fr_0.9fr] lg:items-center xl:gap-12">
         <motion.div style={{ y }} className="relative space-y-6 lg:pr-4 xl:space-y-7">
           <motion.div
@@ -58,7 +56,7 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.55, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
               >
-                <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">profissional e estrategico.</span>
+                <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">profissional e estratégico.</span>
               </motion.span>
             </h1>
 
@@ -68,7 +66,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.45 }}
             >
-              Eu desenvolvo paginas que fortalecem sua imagem, aumentam o valor percebido e geram mais pedidos de orcamento.
+              Eu desenvolvo páginas que fortalecem sua imagem, aumentam o valor percebido e geram mais pedidos de orçamento.
             </motion.p>
           </div>
 
@@ -79,7 +77,7 @@ export function HeroSection() {
             transition={{ duration: 0.55, delay: 0.62 }}
           >
             <PremiumButton href="#cta" className="cta-pulse px-7 py-3.5 text-sm md:text-base">
-              Pedir orcamento <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              Pedir orçamento <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </PremiumButton>
             <PremiumButton href="#portfolio" variant="secondary" className="px-7 py-3.5 text-sm md:text-base">
               <MessageCircle className="mr-2 h-4 w-4 text-accentSoft" /> Ver exemplos
@@ -141,3 +139,9 @@ export function HeroSection() {
     </section>
   );
 }
+
+
+
+
+
+

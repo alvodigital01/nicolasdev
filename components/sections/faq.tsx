@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { faqs } from "@/data/site";
 import { AnimatePresence, motion } from "framer-motion";

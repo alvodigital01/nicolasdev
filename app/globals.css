@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -18,14 +18,12 @@ body {
 body {
   position: relative;
   overflow-x: hidden;
-  background-color: #060b16;
+  background-color: #040810;
   background-image:
-    radial-gradient(circle at 10% 8%, rgba(50, 119, 255, 0.36), transparent 24%),
-    radial-gradient(circle at 84% 12%, rgba(49, 212, 255, 0.24), transparent 20%),
-    radial-gradient(circle at 74% 34%, rgba(78, 161, 255, 0.24), transparent 24%),
-    radial-gradient(circle at 22% 58%, rgba(101, 168, 255, 0.18), transparent 28%),
-    radial-gradient(circle at 88% 78%, rgba(0, 117, 255, 0.12), transparent 22%),
-    linear-gradient(180deg, rgba(7, 12, 24, 0.98), rgba(6, 10, 19, 1) 38%, rgba(5, 9, 18, 1) 100%);
+    radial-gradient(circle at 10% 8%, rgba(50, 119, 255, 0.22), transparent 24%),
+    radial-gradient(circle at 84% 12%, rgba(49, 212, 255, 0.14), transparent 20%),
+    radial-gradient(circle at 74% 34%, rgba(78, 161, 255, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(7, 12, 24, 0.98) 0%, rgba(6, 10, 19, 1) 42%, rgba(4, 8, 16, 1) 100%);
   color: #ffffff;
 }
 
@@ -46,11 +44,7 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background:
-    radial-gradient(circle at left top, rgba(78, 161, 255, 0.14), transparent 24%),
-    radial-gradient(circle at 72% 18%, rgba(126, 192, 255, 0.11), transparent 18%),
-    radial-gradient(circle at 48% 55%, rgba(32, 92, 255, 0.08), transparent 26%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 24%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 24%);
 }
 
 main,
@@ -279,3 +273,5 @@ footer {
     animation: whatsappPulse 2.8s ease-in-out infinite;
   }
 }
+
+
