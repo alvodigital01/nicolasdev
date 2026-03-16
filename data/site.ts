@@ -107,9 +107,9 @@ export const projects: Project[] = [
     href: "https://drywal-dr.vercel.app"
   },
   {
-    name: "Luare Recreacoes",
+    name: "Luarê Recreações",
     category: "Institucional",
-    description: "Site comercial com visual leve, CTA forte no WhatsApp e foco em eventos infantis e corporativos.",
+    description: "Site leve com CTA no WhatsApp e foco em eventos infantis e corporativos.",
     metrics: "CTA principal logo na abertura",
     image: "/images/projects/luna-arquitetura.svg",
     href: "https://luarerecreacoes.com.br/"
@@ -199,5 +199,7 @@ export const faqs: FAQ[] = [
     answer: "Voce envia os objetivos do projeto e recebe uma proposta clara com escopo, prazo e investimento."
   }
 ];
+
+
 
 

@@ -26,9 +26,9 @@ const featuredProjects = [
     variant: "drywall" as const
   },
   {
-    name: "Luare Recreacoes",
+    name: "Luarê Recreações",
     category: "Institucional",
-    description: "Site comercial com CTA forte no WhatsApp, organizacao clara dos servicos e linguagem voltada para eventos.",
+    description: "Site leve com CTA no WhatsApp e foco em eventos infantis e corporativos.",
     metrics: "Hero com foco direto em orcamento",
     accent: "from-[#ffb320]/20 via-[#b9dfff]/22 to-transparent",
     href: "https://luarerecreacoes.com.br/",
@@ -160,12 +160,12 @@ export function PortfolioSection() {
           </div>
         </Reveal>
 
-        <motion.div layout className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <motion.div layout className="grid gap-5 md:auto-rows-fr md:grid-cols-2 xl:grid-cols-3">
           {featuredProjects.map((project, index) => {
             const isExternal = project.href.startsWith("http");
 
             return (
-              <Reveal key={project.name} delay={index * 0.06}>
+              <Reveal key={project.name} className="h-full" delay={index * 0.06}>
                 <Link
                   href={project.href}
                   className="group block h-full"
@@ -176,7 +176,7 @@ export function PortfolioSection() {
                     layout
                     whileHover={{ y: -8, rotateX: 1.4, rotateY: -1.4 }}
                     transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative h-full overflow-hidden rounded-3xl border border-white/[0.05] bg-[rgba(255,255,255,0.02)] p-5 backdrop-blur-[16px] [transform-style:preserve-3d] transition duration-300 group-hover:border-accent/40 group-hover:shadow-[0_24px_70px_-32px_rgba(59,130,246,0.28),inset_0_-1px_0_rgba(126,192,255,0.4)]"
+                    className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/[0.05] bg-[rgba(255,255,255,0.02)] p-5 backdrop-blur-[16px] [transform-style:preserve-3d] transition duration-300 group-hover:border-accent/40 group-hover:shadow-[0_24px_70px_-32px_rgba(59,130,246,0.28),inset_0_-1px_0_rgba(126,192,255,0.4)]"
                     style={{ perspective: 1200 }}
                   >
                     <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[linear-gradient(180deg,rgba(255,255,255,0.03),transparent_35%)] opacity-90" />
@@ -195,9 +195,19 @@ export function PortfolioSection() {
                       </span>
                     </div>
 
-                    <p className="relative mt-3 text-sm leading-relaxed text-textMuted md:text-base">{project.description}</p>
+                    <p
+                      className="relative mt-3 text-sm leading-relaxed text-textMuted md:text-base"
+                      style={{
+                        display: "-webkit-box",
+                        WebkitBoxOrient: "vertical",
+                        WebkitLineClamp: 3,
+                        overflow: "hidden"
+                      }}
+                    >
+                      {project.description}
+                    </p>
 
-                    <div className="relative mt-5 inline-flex items-center gap-2 rounded-full bg-[rgba(61,182,255,0.08)] px-3 py-1.5 text-sm font-medium text-[#9ddbff] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                    <div className="relative mt-auto inline-flex items-center gap-2 rounded-full bg-[rgba(61,182,255,0.08)] px-3 py-1.5 text-sm font-medium text-[#9ddbff] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
                       <TrendingUp className="h-4 w-4" />
                       <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#DDF4FF_100%)] bg-clip-text text-transparent">
                         {project.metrics}
@@ -218,3 +228,7 @@ export function PortfolioSection() {
     </SectionShell>
   );
 }
+
+
+
+
