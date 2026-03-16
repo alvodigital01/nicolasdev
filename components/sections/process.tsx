@@ -11,8 +11,8 @@ export function ProcessSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Processo"
-            title="Fluxo claro para garantir velocidade, qualidade e direção estratégica"
-            description="Um processo direto, profissional e colaborativo para seu projeto sair do briefing para um site que realmente vende melhor."
+            title="Um processo rapido para colocar no ar um site que apoia vendas e crescimento"
+            description="Cada etapa existe para tirar seu projeto do papel com velocidade e transformar sua presenca digital em uma ferramenta de faturamento."
           />
         </Reveal>
         <div className="relative grid gap-5 md:grid-cols-2">
@@ -33,4 +33,3 @@ export function ProcessSection() {
     </SectionShell>
   );
 }
-

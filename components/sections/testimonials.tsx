@@ -11,8 +11,8 @@ export function TestimonialsSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Prova social"
-            title="Empresas que fortaleceram sua marca com uma presença digital profissional"
-            description="Estrutura pronta para inserir depoimentos reais e capturas de feedback de clientes do Instagram e WhatsApp."
+            title="Quando o site transmite mais valor, vender fica muito mais facil"
+            description="Espaco pronto para mostrar feedbacks reais e reforcar que uma presenca profissional ajuda a gerar mais confianca, mais pedidos e mais conversas comerciais."
           />
         </Reveal>
         <div className="grid gap-5 md:grid-cols-3">

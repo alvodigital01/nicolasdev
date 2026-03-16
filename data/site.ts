@@ -1,4 +1,4 @@
-export type NavItem = {
+﻿export type NavItem = {
   label: string;
   href: string;
 };
@@ -99,12 +99,12 @@ export const projects: Project[] = [
     href: "#"
   },
   {
-    name: "Matriz Fitness",
-    category: "Landing Page",
-    description: "Campanha digital com oferta forte e leitura rapida para trafego pago.",
-    metrics: "Lead 29% mais barato",
-    image: "/images/projects/matriz-fitness.svg",
-    href: "#"
+    name: "DR Drywall",
+    category: "Institucional",
+    description: "Site premium para drywall residencial e corporativo, com foco em autoridade visual e pedido de orcamento.",
+    metrics: "Hero com CTA direto para orcamento",
+    image: "/images/projects/dr-drywall.svg",
+    href: "https://drywal-dr.vercel.app"
   },
   {
     name: "Luare Recreacoes",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     description: "Site comercial com visual leve, CTA forte no WhatsApp e foco em eventos infantis e corporativos.",
     metrics: "CTA principal logo na abertura",
     image: "/images/projects/luna-arquitetura.svg",
-    href: "https://www.luarerecreacoes.com.br"
+    href: "https://luarerecreacoes.com.br/"
   },
   {
     name: "Prime Legal",
@@ -199,3 +199,5 @@ export const faqs: FAQ[] = [
     answer: "Voce envia os objetivos do projeto e recebe uma proposta clara com escopo, prazo e investimento."
   }
 ];
+
+

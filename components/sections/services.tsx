@@ -9,20 +9,20 @@ import { SectionShell } from "../ui/section-shell";
 
 const offers = [
   {
-    title: "Landing pages para anúncios",
-    description: "Páginas estratégicas para transformar clique em lead, conversa ou pedido de orçamento.",
+    title: "Landing pages para anuncios",
+    description: "Paginas estrategicas para transformar clique em lead, conversa ou pedido de orcamento.",
     icon: Rocket,
     href: "#cta"
   },
   {
-    title: "Sites comerciais para serviços",
-    description: "Estruturas diretas para apresentar sua oferta, reforçar credibilidade e acelerar a decisão.",
+    title: "Sites comerciais para servicos",
+    description: "Sites pensados para valorizar sua oferta, acelerar a decisao e gerar mais pedidos.",
     icon: LayoutTemplate,
     href: "#cta"
   },
   {
-    title: "Páginas de vendas e captura",
-    description: "Blocos pensados para destacar valor, reduzir objeção e levar o visitante para a ação.",
+    title: "Paginas de vendas e captura",
+    description: "Blocos criados para aumentar desejo, reduzir objecao e puxar o visitante para a acao.",
     icon: Megaphone,
     href: "#cta"
   }
@@ -48,14 +48,14 @@ export function ServicesSection() {
               Oferta
             </span>
             <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
-              Estruturas diretas, visuais e{" "}
+              Sites feitos para atrair mais pedidos, aumentar seu valor percebido e{" "}
               <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
-                feitas para converter
+                ajudar voce a faturar mais
               </span>
               .
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
-              Você não precisa de uma página pesada e institucional. Precisa da estrutura certa para apresentar valor, criar confiança e puxar o clique para a próxima ação.
+              Seu site nao pode so existir. Ele precisa vender sua oferta, transmitir confianca rapido e fazer mais gente chegar pronta para pedir orcamento.
             </p>
           </div>
         </Reveal>
@@ -86,7 +86,7 @@ export function ServicesSection() {
                     <p className="mt-3 text-sm leading-relaxed text-textMuted md:text-base">{offer.description}</p>
 
                     <Link href={offer.href} className="mt-7 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/55 transition duration-300 group-hover:text-accentSoft">
-                      Quero essa estrutura
+                      Quero vender mais
                       <ArrowRight className="h-3.5 w-3.5 transition duration-300 group-hover:translate-x-1" />
                     </Link>
                   </div>

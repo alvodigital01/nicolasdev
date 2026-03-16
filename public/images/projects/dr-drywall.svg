@@ -1,0 +1,44 @@
+﻿<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050608"/>
+      <stop offset="1" stop-color="#171a20"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8d7d4"/>
+      <stop offset="1" stop-color="#8b877f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="36" fill="url(#bg)"/>
+  <rect x="0" y="94" width="1200" height="1" fill="#242932"/>
+  <circle cx="146" cy="52" r="28" fill="#0f1116" stroke="#313640"/>
+  <text x="196" y="48" fill="#f0f1f3" font-family="Arial" font-size="34" font-weight="600">DR Drywall</text>
+  <text x="196" y="82" fill="#9ca3af" font-family="Arial" font-size="18" letter-spacing="3">ALTO PADRAO</text>
+  <rect x="896" y="24" width="184" height="56" rx="28" fill="#d9dde5"/>
+  <text x="932" y="59" fill="#111317" font-family="Arial" font-size="18" font-weight="700">Solicitar Orcamento</text>
+  <text x="132" y="228" fill="#9ca3af" font-family="Arial" font-size="18" letter-spacing="4">DRYWALL RESIDENCIAL E CORPORATIVO</text>
+  <text x="132" y="346" fill="#f3f4f6" font-family="Georgia" font-size="84">Transformando</text>
+  <text x="132" y="442" fill="#f3f4f6" font-family="Georgia" font-size="84">Ambientes com</text>
+  <text x="132" y="538" fill="#f3f4f6" font-family="Georgia" font-size="84">Precisao e Elegancia</text>
+  <rect x="684" y="188" width="402" height="342" rx="28" fill="url(#panel)"/>
+  <rect x="698" y="204" width="374" height="314" rx="20" fill="#bcb8b0" opacity="0.7"/>
+  <rect x="704" y="492" width="238" height="84" rx="18" fill="#111317" opacity="0.78"/>
+  <text x="724" y="534" fill="#f3f4f6" font-family="Arial" font-size="22" font-weight="700">Acabamento de Alto Padrao</text>
+  <text x="724" y="565" fill="#c4c8ce" font-family="Arial" font-size="14">Detalhamento premium e visual limpo</text>
+  <rect x="132" y="588" width="174" height="56" rx="28" fill="#d9dde5"/>
+  <rect x="322" y="588" width="154" height="56" rx="28" fill="none" stroke="#2c313a"/>
+  <text x="158" y="624" fill="#111317" font-family="Arial" font-size="18" font-weight="700">Ver Nossos Projetos</text>
+  <text x="352" y="624" fill="#f3f4f6" font-family="Arial" font-size="18" font-weight="700">Orcamento Rapido</text>
+  <rect x="0" y="718" width="1200" height="82" fill="#0d0f13"/>
+  <path d="M300 718v82" stroke="#1f242c"/>
+  <path d="M600 718v82" stroke="#1f242c"/>
+  <path d="M900 718v82" stroke="#1f242c"/>
+  <text x="142" y="760" fill="#f3f4f6" font-family="Arial" font-size="28" font-weight="700">+300</text>
+  <text x="402" y="760" fill="#f3f4f6" font-family="Arial" font-size="28" font-weight="700">98%</text>
+  <text x="690" y="760" fill="#f3f4f6" font-family="Arial" font-size="28" font-weight="700">10 Anos</text>
+  <text x="980" y="760" fill="#f3f4f6" font-family="Arial" font-size="28" font-weight="700">100%</text>
+  <text x="90" y="790" fill="#9ca3af" font-family="Arial" font-size="16" letter-spacing="2">PROJETOS ENTREGUES</text>
+  <text x="350" y="790" fill="#9ca3af" font-family="Arial" font-size="16" letter-spacing="2">APROVACAO CLIENTES</text>
+  <text x="644" y="790" fill="#9ca3af" font-family="Arial" font-size="16" letter-spacing="2">EXPERIENCIA TECNICA</text>
+  <text x="920" y="790" fill="#9ca3af" font-family="Arial" font-size="16" letter-spacing="2">COMPROMISSO COM PRAZO</text>
+</svg>

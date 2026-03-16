@@ -11,8 +11,8 @@ export function AboutSection() {
         <Reveal>
           <SectionHeading
             eyebrow="Posicionamento"
-            title="Desenvolvimento web com visão de marca, estratégia e resultado"
-            description="Sou Nicolas Lucas, desenvolvedor web focado em criar experiências digitais profissionais para negócios que querem parecer grandes, transmitir confiança e converter melhor."
+            title="Seu site pode aumentar seu valor percebido antes mesmo da primeira conversa"
+            description="Sou Nicolas Lucas, desenvolvedor web focado em criar paginas que fazem sua marca parecer mais forte, transmitir confianca e ajudar seu negocio a vender melhor."
           />
         </Reveal>
         <Reveal delay={0.15}>
@@ -29,7 +29,7 @@ export function AboutSection() {
                 />
               </div>
               <p className="text-sm leading-relaxed text-textMuted md:text-base">
-                Meu trabalho une direção visual premium, estrutura estratégica de conteúdo e desenvolvimento moderno para transformar sua presença digital em uma vitrine de autoridade. O objetivo não é apenas ter um site bonito, mas uma presença que fortalece sua marca e gera oportunidades reais.
+                Meu trabalho une direcao visual premium, oferta bem apresentada e desenvolvimento moderno para transformar seu site em uma ferramenta de autoridade e vendas. A ideia nao e so ficar bonito, mas fazer o cliente enxergar mais valor e chegar mais pronto para fechar.
               </p>
             </div>
           </div>

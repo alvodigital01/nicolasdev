@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -17,12 +17,13 @@ const featuredProjects = [
     href: "#cta"
   },
   {
-    name: "Matriz Fitness",
-    category: "Landing Page",
-    description: "Campanha digital com oferta forte e leitura rapida para trafego pago.",
-    metrics: "Lead 29% mais barato",
-    accent: "from-blue-400/30 via-indigo-300/10 to-transparent",
-    href: "#cta"
+    name: "DR Drywall",
+    category: "Institucional",
+    description: "Site premium para drywall residencial e corporativo, com foco em autoridade visual e pedido de orcamento.",
+    metrics: "Hero com CTA direto para orcamento",
+    accent: "from-white/12 via-stone-300/10 to-transparent",
+    href: "https://drywal-dr.vercel.app",
+    variant: "drywall" as const
   },
   {
     name: "Luare Recreacoes",
@@ -30,12 +31,12 @@ const featuredProjects = [
     description: "Site comercial com CTA forte no WhatsApp, organizacao clara dos servicos e linguagem voltada para eventos.",
     metrics: "Hero com foco direto em orcamento",
     accent: "from-[#ffb320]/20 via-[#b9dfff]/22 to-transparent",
-    href: "https://www.luarerecreacoes.com.br",
+    href: "https://luarerecreacoes.com.br/",
     variant: "luare" as const
   }
 ];
 
-function ProjectMockup({ accent, variant = "default" }: { accent: string; variant?: "default" | "luare" }) {
+function ProjectMockup({ accent, variant = "default" }: { accent: string; variant?: "default" | "luare" | "drywall" }) {
   if (variant === "luare") {
     return (
       <div className="relative h-52 overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#f7fbff_0%,#eef6ff_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]">
@@ -69,6 +70,56 @@ function ProjectMockup({ accent, variant = "default" }: { accent: string; varian
     );
   }
 
+  if (variant === "drywall") {
+    return (
+      <div className="relative h-52 overflow-hidden rounded-[28px] bg-[linear-gradient(180deg,#050608_0%,#0d1015_100%)] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+        <div className={`absolute inset-0 bg-gradient-to-br ${accent}`} />
+        <div className="absolute inset-x-0 top-0 h-11 border-b border-white/8 bg-black/40" />
+        <div className="absolute left-4 top-3 flex items-center gap-3">
+          <div className="h-6 w-6 rounded-full border border-white/10 bg-white/5" />
+          <div>
+            <div className="h-3 w-20 rounded-full bg-white/75" />
+            <div className="mt-1 h-2 w-14 rounded-full bg-white/25" />
+          </div>
+        </div>
+        <div className="absolute right-4 top-3 flex gap-2">
+          <div className="h-3 w-10 rounded-full bg-white/10" />
+          <div className="h-3 w-12 rounded-full bg-white/10" />
+          <div className="h-3 w-16 rounded-full bg-white/10" />
+        </div>
+        <div className="absolute left-5 top-16 w-[44%]">
+          <div className="h-3 w-32 rounded-full bg-white/35" />
+          <div className="mt-4 h-8 w-44 rounded-full bg-white/85" />
+          <div className="mt-3 h-8 w-40 rounded-full bg-white/80" />
+          <div className="mt-3 h-8 w-48 rounded-full bg-white/80" />
+          <div className="mt-5 space-y-2">
+            <div className="h-2.5 w-full rounded-full bg-white/18" />
+            <div className="h-2.5 w-[92%] rounded-full bg-white/18" />
+            <div className="h-2.5 w-[78%] rounded-full bg-white/18" />
+          </div>
+          <div className="mt-5 flex gap-3">
+            <div className="h-9 w-32 rounded-full bg-[#d9dde5]" />
+            <div className="h-9 w-28 rounded-full border border-white/12 bg-white/[0.03]" />
+          </div>
+        </div>
+        <div className="absolute bottom-4 right-4 top-14 w-[39%] rounded-[26px] border border-white/8 bg-[linear-gradient(180deg,#d8d7d4_0%,#8d8a84_100%)] p-3 shadow-[0_18px_48px_rgba(0,0,0,0.35)]">
+          <div className="h-full rounded-[20px] bg-[linear-gradient(135deg,#c8c6c1_0%,#8e8b84_45%,#65615b_100%)]" />
+          <div className="absolute bottom-3 left-3 right-3 rounded-[18px] bg-black/70 p-3 backdrop-blur-sm">
+            <div className="h-3 w-28 rounded-full bg-white/75" />
+            <div className="mt-2 h-2.5 w-full rounded-full bg-white/20" />
+            <div className="mt-1.5 h-2.5 w-[82%] rounded-full bg-white/20" />
+          </div>
+        </div>
+        <div className="absolute inset-x-0 bottom-0 grid h-12 grid-cols-4 border-t border-white/8 bg-black/35">
+          <div className="border-r border-white/8" />
+          <div className="border-r border-white/8" />
+          <div className="border-r border-white/8" />
+          <div />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative h-52 overflow-hidden rounded-2xl bg-[#08111d] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
       <div className={`absolute inset-0 bg-gradient-to-br ${accent}`} />
@@ -97,10 +148,14 @@ export function PortfolioSection() {
               Projetos em destaque
             </span>
             <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
-              Menos volume, mais prova visual.
+              Exemplos de paginas pensadas para gerar mais valor percebido e{" "}
+              <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
+                trazer mais pedidos
+              </span>
+              .
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
-              Em vez de uma galeria longa, a home mostra apenas alguns exemplos que deixam claro o nivel de acabamento e foco comercial.
+              Cada projeto mostra como design, oferta e CTA trabalham juntos para transformar visita em interesse comercial real.
             </p>
           </div>
         </Reveal>
