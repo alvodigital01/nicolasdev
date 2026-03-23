@@ -211,14 +211,13 @@ export function PortfolioSection() {
               Projetos em destaque
             </span>
             <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
-              Exemplos de páginas pensadas para gerar mais valor percebido e{" "}
+              Projetos reais, entregues para{" "}
               <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
-                trazer mais pedidos
+                clientes reais
               </span>
-              .
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
-              Cada projeto mostra como design, oferta e CTA trabalham juntos para transformar visita em interesse comercial real.
+              Cada site foi desenvolvido para um negócio específico — com foco em clareza, confiança e mais pedidos de orçamento.
             </p>
           </div>
         </Reveal>
@@ -291,6 +290,8 @@ export function PortfolioSection() {
     </SectionShell>
   );
 }
+
+
 
 
 
