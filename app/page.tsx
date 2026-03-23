@@ -1,4 +1,4 @@
-﻿import { DifferentialsSection } from "@/components/sections/differentials";
+import { DifferentialsSection } from "@/components/sections/differentials";
 import { FinalCtaSection } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 import { HeroSection } from "@/components/sections/hero";
@@ -32,7 +32,7 @@ function SectionDivider({
     <div aria-hidden="true" className={`pointer-events-none relative z-10 ${className}`}>
       <svg
         viewBox="0 0 1200 72"
-        className="h-14 w-full drop-shadow-[0_0_18px_rgba(126,192,255,0.2)] md:h-16"
+        className="section-divider-flow h-14 w-full drop-shadow-[0_0_18px_rgba(126,192,255,0.2)] md:h-16"
         fill="none"
         preserveAspectRatio="none"
       >
@@ -51,9 +51,24 @@ function SectionDivider({
             <stop offset="0.84" stopColor="#7EC0FF" />
             <stop offset="1" stopColor="rgba(255,255,255,0)" />
           </linearGradient>
+          <linearGradient id={`${variant}-divider-flow`} x1="0" y1="0" x2="1200" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stopColor="rgba(255,255,255,0)" />
+            <stop offset="0.42" stopColor="rgba(255,255,255,0)" />
+            <stop offset="0.5" stopColor="rgba(255,255,255,0.95)" />
+            <stop offset="0.58" stopColor="rgba(126,192,255,0.58)" />
+            <stop offset="0.7" stopColor="rgba(255,255,255,0)" />
+            <stop offset="1" stopColor="rgba(255,255,255,0)" />
+          </linearGradient>
         </defs>
-        <path d={path} stroke={`url(#${glowId})`} strokeWidth="8" strokeLinecap="round" />
-        <path d={path} stroke={`url(#${strokeId})`} strokeWidth="2" strokeLinecap="round" />
+        <path d={path} className="section-divider-halo" stroke={`url(#${glowId})`} strokeWidth="8" strokeLinecap="round" />
+        <path d={path} className="section-divider-stroke" stroke={`url(#${strokeId})`} strokeWidth="2" strokeLinecap="round" />
+        <path
+          d={path}
+          className="section-divider-stream"
+          stroke={`url(#${variant}-divider-flow)`}
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
       </svg>
     </div>
   );
@@ -80,3 +95,7 @@ export default function HomePage() {
     </>
   );
 }
+
+
+
+
