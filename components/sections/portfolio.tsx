@@ -1,9 +1,12 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
+import drDrywallGif from "../../drdrywallgif.gif";
+import fredPecasGif from "../../fredpeçasgif.gif";
+import luareGif from "../../luaregif.gif";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionShell } from "../ui/section-shell";
@@ -17,7 +20,7 @@ const featuredProjects = [
     accent: "from-[#ef4444]/20 via-[#1d4ed8]/16 to-transparent",
     href: "https://fred-pe-as.vercel.app",
     variant: "fred" as const,
-    image: "/images/projects/fred-pecas.svg",
+    image: fredPecasGif,
     alt: "Preview do site Fred Peças"
   },
   {
@@ -28,7 +31,7 @@ const featuredProjects = [
     accent: "from-white/12 via-stone-300/10 to-transparent",
     href: "https://drywal-dr.vercel.app",
     variant: "drywall" as const,
-    image: "/images/projects/dr-drywall.svg",
+    image: drDrywallGif,
     alt: "Preview do site DR Drywall"
   },
   {
@@ -39,7 +42,7 @@ const featuredProjects = [
     accent: "from-[#ffb320]/20 via-[#b9dfff]/22 to-transparent",
     href: "https://luarerecreacoes.com.br/",
     variant: "luare" as const,
-    image: "/images/projects/luna-arquitetura.svg",
+    image: luareGif,
     alt: "Preview do site Luarê Recreações"
   }
 ];
@@ -247,10 +250,15 @@ export function PortfolioSection() {
                     <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_top_left,rgba(126,192,255,0.16),transparent_38%)] opacity-0 transition duration-300 group-hover:opacity-100" />
 
                     <div className="relative overflow-hidden rounded-2xl transition duration-700 group-hover:scale-[1.01] group-hover:brightness-110">
-                      <Image src={project.image} alt={project.alt} width={1200} height={630} className="sr-only" />
-                      <div className="transition duration-700 ease-out group-hover:scale-[1.05]">
-                        <ProjectMockup accent={project.accent} variant={project.variant} />
-                      </div>
+                      <div className={`pointer-events-none absolute inset-0 z-10 bg-gradient-to-br ${project.accent}`} />
+                      <Image
+                        src={project.image}
+                        alt={project.alt}
+                        width={1200}
+                        height={630}
+                        unoptimized
+                        className="h-52 w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.05]"
+                      />
                     </div>
 
                     <div className="relative mt-5 flex items-start justify-between gap-3">
@@ -298,3 +306,4 @@ export function PortfolioSection() {
     </SectionShell>
   );
 }
+

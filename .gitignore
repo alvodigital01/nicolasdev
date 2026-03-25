@@ -27,3 +27,8 @@ pnpm-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# local temp artifacts
+TEMP/
+tportable-x64.6.6.2.zip
+tsetup-x64.6.6.2.exe
+ TEMP/
