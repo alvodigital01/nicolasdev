@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -12,26 +12,12 @@ const stats = [
   { value: "+ vendas", label: "mais impulso para fechar" }
 ];
 
-const monthNames = [
-  "janeiro",
-  "fevereiro",
-  "março",
-  "abril",
-  "maio",
-  "junho",
-  "julho",
-  "agosto",
-  "setembro",
-  "outubro",
-  "novembro",
-  "dezembro"
-];
 
 export function HeroSection() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 360], [0, 36]);
   const now = new Date();
-  const nomeMesAtual = monthNames[now.getMonth()];
+  const nomeMesAtual = new Intl.DateTimeFormat("pt-BR", { month: "long" }).format(now);
   const vagasRestantes = Math.max(2, 4 - (now.getMonth() % 2));
 
   return (

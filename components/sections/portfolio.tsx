@@ -27,7 +27,7 @@ const featuredProjects = [
     name: "DR Drywall",
     category: "Institucional",
     description: "Site premium para drywall residencial e corporativo, com foco em autoridade visual e pedido de orçamento.",
-    metrics: "Orcamento direto",
+    metrics: "Orçamento direto",
     accent: "from-white/12 via-stone-300/10 to-transparent",
     href: "https://drywal-dr.vercel.app",
     variant: "drywall" as const,
