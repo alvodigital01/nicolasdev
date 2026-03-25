@@ -7,7 +7,14 @@ export function BackToTopFab() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 300);
+    const onScroll = () => {
+      const scrollTop = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const fullHeight = document.documentElement.scrollHeight;
+      const distanceToBottom = fullHeight - (scrollTop + viewportHeight);
+
+      setVisible(distanceToBottom <= 520);
+    };
 
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
