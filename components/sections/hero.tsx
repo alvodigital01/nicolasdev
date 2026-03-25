@@ -12,9 +12,27 @@ const stats = [
   { value: "+ vendas", label: "mais impulso para fechar" }
 ];
 
+const monthNames = [
+  "janeiro",
+  "fevereiro",
+  "março",
+  "abril",
+  "maio",
+  "junho",
+  "julho",
+  "agosto",
+  "setembro",
+  "outubro",
+  "novembro",
+  "dezembro"
+];
+
 export function HeroSection() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 360], [0, 36]);
+  const now = new Date();
+  const nomeMesAtual = monthNames[now.getMonth()];
+  const vagasRestantes = Math.max(2, 4 - (now.getMonth() % 2));
 
   return (
     <section id="inicio" className="relative overflow-hidden pt-24 lg:pt-28">
@@ -49,11 +67,17 @@ export function HeroSection() {
           </div>
 
           <motion.div className="flex flex-wrap gap-4" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.62 }}>
+            <div className="w-full">
+              <div className="inline-flex rounded-full border border-[rgba(248,113,113,0.26)] bg-[linear-gradient(180deg,rgba(127,29,29,0.22),rgba(120,53,15,0.14))] px-4 py-2 text-xs font-medium text-[#ffd8d1] shadow-[0_10px_30px_-20px_rgba(248,113,113,0.55)]">
+                <span aria-hidden="true" className="mr-2">🔴</span>
+                Apenas {vagasRestantes} vagas abertas para {nomeMesAtual} - agenda quase cheia.
+              </div>
+            </div>
             <PremiumButton href="#cta" className="cta-pulse px-7 py-3.5 text-sm md:text-base">
               Pedir orçamento <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </PremiumButton>
             <PremiumButton href="#portfolio" variant="secondary" className="px-7 py-3.5 text-sm md:text-base">
-              <MessageCircle className="mr-2 h-4 w-4 text-accentSoft" /> Ver exemplos
+              <MessageCircle className="mr-2 h-4 w-4 text-accentSoft" /> Ver projetos reais
             </PremiumButton>
           </motion.div>
 
@@ -89,3 +113,4 @@ export function HeroSection() {
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Playfair_Display, Plus_Jakarta_Sans, Sora } from "next/font/google";
 import { BackToTopFab } from "@/components/ui/back-to-top-fab";
@@ -26,16 +26,66 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Nicolas Lucas | Desenvolvimento Web Premium",
   description:
-    "Sites profissionais para marcas e empresas que querem fortalecer presença digital, transmitir autoridade e vender mais.",
+    "Desenvolvimento de landing pages, sites comerciais e páginas de venda para negócios que querem mais pedidos de orçamento e maior valor percebido.",
+  keywords: ["desenvolvimento web", "landing page", "site profissional", "sites para empresas", "Nicolas Lucas", "NicolasDev"],
+  authors: [{ name: "Nicolas Lucas" }],
+  creator: "Nicolas Lucas",
+  metadataBase: new URL("https://www.nicolasdev.online"),
+  alternates: {
+    canonical: "https://www.nicolasdev.online"
+  },
   openGraph: {
-    title: "Nicolas Lucas | Desenvolvimento Web Premium",
-    description:
-      "Criação de landing pages, sites institucionais e experiências digitais modernas para negócios que querem crescer.",
     type: "website",
-    locale: "pt_BR"
+    locale: "pt_BR",
+    url: "https://www.nicolasdev.online",
+    siteName: "NicolasDev",
+    title: "Nicolas Lucas | Desenvolvimento Web Premium",
+    description: "Sites estratégicos que aumentam o valor percebido e geram mais pedidos de orçamento para o seu negócio.",
+    images: [
+      {
+        url: "/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Nicolas Lucas - Desenvolvimento Web Premium"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nicolas Lucas | Desenvolvimento Web Premium",
+    description: "Sites estratégicos que aumentam o valor percebido e geram mais pedidos de orçamento.",
+    images: ["/images/og-image.jpg"]
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
   },
   icons: {
     icon: "/icon.svg"
+  }
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Nicolas Lucas",
+  url: "https://www.nicolasdev.online",
+  jobTitle: "Desenvolvedor Web",
+  description:
+    "Desenvolvimento de landing pages e sites comerciais estratégicos para negócios que querem mais pedidos de orçamento.",
+  sameAs: ["https://instagram.com/nicolasdev_oficial", "https://wa.me/5543988724786"],
+  offers: {
+    "@type": "Offer",
+    name: "Desenvolvimento de Sites e Landing Pages",
+    description: "Landing pages para anúncios, sites comerciais para serviços e páginas de vendas e captura.",
+    url: "https://www.nicolasdev.online/#servicos"
   }
 };
 
@@ -46,6 +96,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://wa.me" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body className={`${sora.variable} ${jakarta.variable} ${playfair.variable} bg-background font-body text-white antialiased`}>
         {children}
         <BackToTopFab />

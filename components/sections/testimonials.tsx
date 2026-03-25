@@ -1,4 +1,5 @@
-﻿import davidRuanAvatar from "../../davidruandep.png";
+﻿import Image from "next/image";
+import davidRuanAvatar from "../../davidruandep.png";
 import tioMiojoAvatar from "../../tiomiojodep.png";
 import lucasFredAvatar from "../../lucasfreddep.png";
 import { Container } from "../ui/container";
@@ -15,6 +16,13 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
   {
+    name: "Lucas Alexandre",
+    business: "Fred Peças Elétricas",
+    quote:
+      "Agora ficou muito mais fácil mostrar nossas peças e passar confiança no atendimento. O cliente entra no site, entende melhor o que a empresa faz e já chama no WhatsApp para pedir orçamento.",
+    avatar: lucasFredAvatar.src
+  },
+  {
     name: "David Ruan",
     business: "DR Drywall",
     quote:
@@ -27,13 +35,6 @@ const testimonials: Testimonial[] = [
     quote:
       "Ficou muito mais fácil mostrar nossos eventos infantis e corporativos sem depender só do Instagram. O site passa confiança e ajuda bastante quando alguém pede o link.",
     avatar: tioMiojoAvatar.src
-  },
-  {
-    name: "Lucas Alexandre",
-    business: "Fred Peças Elétricas",
-    quote:
-      "Agora ficou muito mais fácil mostrar nossas peças e passar confiança no atendimento. O cliente entra no site, entende melhor o que a empresa faz e já chama no WhatsApp para pedir orçamento.",
-    avatar: lucasFredAvatar.src
   }
 ];
 
@@ -64,16 +65,17 @@ export function TestimonialsSection() {
                 </span>
 
                 <div className="relative flex items-center gap-4">
-                  <img
+                  <Image
                     src={item.avatar ?? `https://i.pravatar.cc/60?img=${index + 1}`}
-                    alt={`Foto de ${item.name}`}
+                    alt={`Foto de ${item.name}, ${item.business}`}
+                    width={60}
+                    height={60}
                     className="h-[60px] w-[60px] rounded-full border border-white/10 object-cover"
-                    loading="lazy"
                   />
 
                   <div>
                     <p className="font-display text-lg text-white">{item.name}</p>
-                    <p className="text-sm text-white/48">{item.business}</p>
+                    <p className="text-sm text-white/70">{item.business}</p>
                   </div>
                 </div>
 
@@ -88,4 +90,3 @@ export function TestimonialsSection() {
     </SectionShell>
   );
 }
-

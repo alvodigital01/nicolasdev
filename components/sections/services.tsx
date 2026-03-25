@@ -11,18 +11,21 @@ const offers = [
   {
     title: "Landing pages para anúncios",
     description: "Páginas estratégicas para transformar clique em lead, conversa ou pedido de orçamento.",
+    detail: "Ideal para quem roda anúncios e quer transformar clique em conversa.",
     icon: Rocket,
     href: "#cta"
   },
   {
     title: "Sites comerciais para serviços",
     description: "Sites pensados para valorizar sua oferta, acelerar a decisão e gerar mais pedidos.",
+    detail: "Perfeito para quem quer passar mais confiança e justificar um preço maior.",
     icon: LayoutTemplate,
     href: "#cta"
   },
   {
     title: "Páginas de vendas e captura",
     description: "Blocos criados para aumentar desejo, reduzir objeção e puxar o visitante para a ação.",
+    detail: "Indicado para lançamentos, infoprodutos ou ofertas que precisam converter direto.",
     icon: Megaphone,
     href: "#cta"
   }
@@ -84,6 +87,7 @@ export function ServicesSection() {
 
                     <h3 className="font-display text-[1.65rem] leading-tight text-white">{offer.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-textMuted md:text-base">{offer.description}</p>
+                    <p className="mt-3 text-xs leading-relaxed text-white/60 md:text-sm">{offer.detail}</p>
 
                     <Link href={offer.href} className="mt-7 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/55 transition duration-300 group-hover:text-accentSoft">
                       Quero vender mais
@@ -99,4 +103,3 @@ export function ServicesSection() {
     </SectionShell>
   );
 }
-

@@ -15,6 +15,10 @@ body {
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   overflow-x: hidden;
@@ -57,6 +61,15 @@ footer {
 ::selection {
   background: rgba(126, 192, 255, 0.3);
   color: #ffffff;
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #8dd3ff;
+  outline-offset: 3px;
+}
+
+:where(input, select, textarea)::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 @keyframes floating {
@@ -125,6 +138,7 @@ footer {
     box-shadow: 0 0 0 12px rgba(126, 192, 255, 0), 0 22px 52px -24px rgba(59, 130, 246, 0.8);
   }
 }
+
 @keyframes shimmerSweep {
   0% {
     transform: translateX(-160%) skewX(-18deg);
@@ -170,7 +184,6 @@ footer {
     opacity: 0.52;
   }
 }
-
 
 @keyframes dividerDrift {
   0%,
@@ -245,6 +258,7 @@ footer {
     stroke-dashoffset: -58;
   }
 }
+
 @layer utilities {
   .glass-surface {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
@@ -323,7 +337,6 @@ footer {
     animation: whatsappPulse 2.8s ease-in-out infinite;
   }
 
-
   .header-flow-frame {
     animation: headerFlowDrift 7.4s ease-in-out infinite;
   }
@@ -357,6 +370,7 @@ footer {
     opacity: 0.9;
     animation: headerFlowStream 5.2s linear infinite;
   }
+
   .section-divider-flow {
     animation: dividerDrift 8.5s ease-in-out infinite;
     overflow: visible;
@@ -379,13 +393,3 @@ footer {
     mix-blend-mode: screen;
   }
 }
-
-
-
-
-
-
-
-
-
-

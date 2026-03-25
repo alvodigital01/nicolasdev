@@ -1,4 +1,4 @@
-﻿import { DifferentialsSection } from "@/components/sections/differentials";
+﻿import { AboutSection } from "@/components/sections/about";
 import { FinalCtaSection } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 import { HeroSection } from "@/components/sections/hero";
@@ -85,13 +85,13 @@ export default function HomePage() {
         <SectionDivider variant="hero" />
         <TrustMarqueeSection />
         <ServicesSection />
-        <SectionDivider variant="arc" />
-        <DifferentialsSection />
         <SectionDivider variant="ribbon" />
         <PortfolioSection />
         <SectionDivider variant="pulse" />
         <TestimonialsSection />
         <SectionDivider variant="echo" />
+        <AboutSection />
+        <SectionDivider variant="arc" />
         <FinalCtaSection />
       </main>
       <SectionDivider variant="horizon" className="-mt-2 mb-0" />

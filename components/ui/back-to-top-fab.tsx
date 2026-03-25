@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import { ChevronUp } from "lucide-react";
@@ -23,7 +23,7 @@ export function BackToTopFab() {
       type="button"
       aria-label="Voltar ao topo"
       onClick={handleClick}
-      className={`back-to-top-fab group fixed left-6 z-40 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/80 backdrop-blur-[12px] transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] hover:text-white sm:left-8 ${
+      className={`back-to-top-fab group fixed left-6 z-40 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/80 backdrop-blur-[12px] transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.08] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8dd3ff] sm:left-8 ${
         visible ? "bottom-[6.5rem] pointer-events-auto translate-y-0 opacity-100 sm:bottom-[7.5rem]" : "bottom-[6rem] pointer-events-none translate-y-2.5 opacity-0 sm:bottom-[7rem]"
       }`}
     >

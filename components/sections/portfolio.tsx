@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, TrendingUp } from "lucide-react";
@@ -15,7 +16,9 @@ const featuredProjects = [
     metrics: "Catálogo e consultoria",
     accent: "from-[#ef4444]/20 via-[#1d4ed8]/16 to-transparent",
     href: "https://fred-pe-as.vercel.app",
-    variant: "fred" as const
+    variant: "fred" as const,
+    image: "/images/projects/fred-pecas.svg",
+    alt: "Preview do site Fred Peças"
   },
   {
     name: "DR Drywall",
@@ -24,7 +27,9 @@ const featuredProjects = [
     metrics: "Orcamento direto",
     accent: "from-white/12 via-stone-300/10 to-transparent",
     href: "https://drywal-dr.vercel.app",
-    variant: "drywall" as const
+    variant: "drywall" as const,
+    image: "/images/projects/dr-drywall.svg",
+    alt: "Preview do site DR Drywall"
   },
   {
     name: "Luarê Recreações",
@@ -33,7 +38,9 @@ const featuredProjects = [
     metrics: "WhatsApp em destaque",
     accent: "from-[#ffb320]/20 via-[#b9dfff]/22 to-transparent",
     href: "https://luarerecreacoes.com.br/",
-    variant: "luare" as const
+    variant: "luare" as const,
+    image: "/images/projects/luna-arquitetura.svg",
+    alt: "Preview do site Luarê Recreações"
   }
 ];
 
@@ -217,7 +224,7 @@ export function PortfolioSection() {
               </span>
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
-              Cada site foi desenvolvido para um negócio específico — com foco em clareza, confiança e mais pedidos de orçamento.
+              Cada site foi desenvolvido para um negócio específico - com foco em clareza, confiança e mais pedidos de orçamento.
             </p>
           </div>
         </Reveal>
@@ -227,13 +234,8 @@ export function PortfolioSection() {
             const isExternal = project.href.startsWith("http");
 
             return (
-              <Reveal key={project.name} className="h-full" delay={index * 0.06}>
-                <Link
-                  href={project.href}
-                  className="group block h-full"
-                  target={isExternal ? "_blank" : undefined}
-                  rel={isExternal ? "noreferrer noopener" : undefined}
-                >
+              <Reveal key={`${project.name}-${index}`} className="h-full" delay={index * 0.06}>
+                <div className="group block h-full">
                   <motion.article
                     layout
                     whileHover={{ y: -8, rotateX: 1.4, rotateY: -1.4 }}
@@ -242,9 +244,10 @@ export function PortfolioSection() {
                     style={{ perspective: 1200 }}
                   >
                     <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[linear-gradient(180deg,rgba(255,255,255,0.03),transparent_35%)] opacity-90" />
-                    <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 transition duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_top_left,rgba(126,192,255,0.16),transparent_38%)]" />
+                    <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_top_left,rgba(126,192,255,0.16),transparent_38%)] opacity-0 transition duration-300 group-hover:opacity-100" />
 
                     <div className="relative overflow-hidden rounded-2xl transition duration-700 group-hover:scale-[1.01] group-hover:brightness-110">
+                      <Image src={project.image} alt={project.alt} width={1200} height={630} className="sr-only" />
                       <div className="transition duration-700 ease-out group-hover:scale-[1.05]">
                         <ProjectMockup accent={project.accent} variant={project.variant} />
                       </div>
@@ -276,12 +279,17 @@ export function PortfolioSection() {
                       </span>
                     </div>
 
-                    <div className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/65 transition duration-300 group-hover:text-accentSoft">
+                    <Link
+                      href={project.href}
+                      className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/65 transition duration-300 hover:text-accentSoft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8dd3ff] group-hover:text-accentSoft"
+                      target={isExternal ? "_blank" : undefined}
+                      rel={isExternal ? "noreferrer noopener" : undefined}
+                    >
                       Visitar site
                       <ArrowUpRight className="h-4 w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    </div>
+                    </Link>
                   </motion.article>
-                </Link>
+                </div>
               </Reveal>
             );
           })}
@@ -290,11 +298,3 @@ export function PortfolioSection() {
     </SectionShell>
   );
 }
-
-
-
-
-
-
-
-

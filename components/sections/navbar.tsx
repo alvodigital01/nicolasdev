@@ -54,7 +54,7 @@ export function Navbar() {
                 scrolled ? "h-[4.45rem]" : "h-[4.8rem]"
               )}
             >
-              <Link href="#inicio" className="group inline-flex min-w-0 items-end gap-1.5 leading-none sm:gap-2">
+              <Link href="#inicio" aria-label="Ir para o início" className="group inline-flex min-w-0 items-end gap-1.5 leading-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8dd3ff] sm:gap-2">
                 <span className="font-brand text-[1.6rem] font-semibold italic tracking-[0.02em] text-transparent drop-shadow-[0_10px_28px_rgba(126,192,255,0.18)] bg-[linear-gradient(135deg,#F7FBFF_0%,#D7EBFF_44%,#95CFFF_100%)] bg-clip-text sm:text-[2rem]">
                   Nicolas
                 </span>
@@ -63,12 +63,12 @@ export function Navbar() {
                 </span>
               </Link>
 
-              <nav className="hidden items-center gap-7 md:flex">
+              <nav aria-label="Navegação principal" className="hidden items-center gap-7 md:flex">
                 {navItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="text-sm text-[rgba(219,233,248,0.78)] transition duration-300 hover:text-white"
+                    className="text-sm text-[rgba(219,233,248,0.78)] transition duration-300 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8dd3ff]"
                   >
                     {item.label}
                   </Link>
