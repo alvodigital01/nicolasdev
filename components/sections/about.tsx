@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { Bolt, CalendarDays, CircleCheckBig } from "lucide-react";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
@@ -55,7 +55,7 @@ export function AboutSection() {
                 Sou Nicolas Lucas, desenvolvedor web com mais de 1 ano de experiência entregando sites e landing pages para negócios reais. Já entreguei mais de 10 projetos com foco em clareza, conversão e prazo.
               </p>
               <p className="text-sm leading-relaxed text-textMuted md:text-base">
-                Não trabalho com template genérico nem entrego site bonito que não vende. Cada página que saio é pensada para o negócio do cliente - do copy ao CTA.
+                Não trabalho com template genérico, nem entrego site bonito que não vende. Cada página que crio é pensada para o negócio do cliente, do copy ao CTA.
               </p>
             </div>
 
