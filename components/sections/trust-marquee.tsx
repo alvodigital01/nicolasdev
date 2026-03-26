@@ -1,4 +1,4 @@
-﻿import { MessageCircle, MoveRight, Rocket, Target } from "lucide-react";
+import { MessageCircle, MoveRight, Rocket, Target } from "lucide-react";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionShell } from "../ui/section-shell";
@@ -36,7 +36,7 @@ export function TrustMarqueeSection() {
               <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-[rgba(188,210,232,0.62)]">
                 Etapas simples para tirar seu projeto do papel
               </p>
-              <div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/48 shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_0_20px_rgba(126,192,255,0.06)] md:inline-flex">
+              <div className="hidden rounded-full border border-white/15 bg-white/[0.04] px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-accentSoft shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_0_20px_rgba(126,192,255,0.06)] md:inline-flex">
                 Como funciona
               </div>
             </div>
