@@ -250,15 +250,20 @@ export function PortfolioSection() {
                     <div className="pointer-events-none absolute inset-0 rounded-3xl bg-[radial-gradient(circle_at_top_left,rgba(126,192,255,0.16),transparent_38%)] opacity-0 transition duration-300 group-hover:opacity-100" />
 
                     <div className="relative overflow-hidden rounded-2xl transition duration-700 group-hover:scale-[1.01] group-hover:brightness-110">
-                      <div className={`pointer-events-none absolute inset-0 z-10 bg-gradient-to-br ${project.accent}`} />
-                      <Image
-                        src={project.image}
-                        alt={project.alt}
-                        width={1200}
-                        height={630}
-                        unoptimized
-                        className="h-52 w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.05]"
-                      />
+                      <div className="md:hidden">
+                        <ProjectMockup accent={project.accent} variant={project.variant} />
+                      </div>
+                      <div className="relative hidden md:block">
+                        <div className={`pointer-events-none absolute inset-0 z-10 bg-gradient-to-br ${project.accent}`} />
+                        <Image
+                          src={project.image}
+                          alt={project.alt}
+                          width={1200}
+                          height={630}
+                          unoptimized
+                          className="h-52 w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.05]"
+                        />
+                      </div>
                     </div>
 
                     <div className="relative mt-5 flex items-start justify-between gap-3">
