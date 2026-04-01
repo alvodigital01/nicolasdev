@@ -16,8 +16,6 @@ const stats = [
 export function HeroSection() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 360], [0, 36]);
-  const mesAtual = new Date().toLocaleString("pt-BR", { month: "long" });
-  const mesCapitalizado = mesAtual.charAt(0).toUpperCase() + mesAtual.slice(1);
 
   return (
     <section id="inicio" className="relative overflow-hidden pt-28 sm:pt-24 lg:pt-28">
@@ -64,7 +62,7 @@ export function HeroSection() {
             <div className="w-full">
               <div className="inline-flex w-full rounded-[22px] border border-[rgba(248,113,113,0.26)] bg-[linear-gradient(180deg,rgba(127,29,29,0.22),rgba(120,53,15,0.14))] px-4 py-3 text-[13px] font-medium leading-snug text-[#ffd8d1] shadow-[0_10px_30px_-20px_rgba(248,113,113,0.55)] sm:w-auto sm:rounded-full sm:px-4 sm:py-2 sm:text-xs">
                 <span aria-hidden="true" className="mr-2">🔥</span>
-                Apenas 4 vagas abertas para {mesCapitalizado} - agenda quase cheia.
+                {"Apenas 4 vagas abertas para Abril - agenda quase cheia."}
               </div>
             </div>
             <PremiumButton href="#cta" className="cta-pulse w-full px-7 py-3.5 text-base sm:w-auto sm:text-sm md:text-base">
@@ -107,4 +105,8 @@ export function HeroSection() {
     </section>
   );
 }
+
+
+
+
 
