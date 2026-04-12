@@ -104,7 +104,7 @@ export const projects: Project[] = [
     description: "Site premium para drywall residencial e corporativo, com foco em autoridade visual e pedido de orçamento.",
     metrics: "Orçamento direto",
     image: "/images/projects/dr-drywall.svg",
-    href: "https://drywal-dr.vercel.app"
+    href: "https://www.drdrywall.online"
   },
   {
     name: "Luarê Recreações",
