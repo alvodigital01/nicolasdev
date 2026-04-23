@@ -7,12 +7,14 @@ type PremiumButtonProps = {
   children: ReactNode;
   variant?: "primary" | "secondary";
   className?: string;
+  onClick?: () => void;
 };
 
-export function PremiumButton({ href, children, variant = "primary", className }: PremiumButtonProps) {
+export function PremiumButton({ href, children, variant = "primary", className, onClick }: PremiumButtonProps) {
   return (
     <Link
       href={href}
+      onClick={onClick}
       className={cn(
         "group relative inline-flex items-center justify-center overflow-hidden rounded-full border px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-300 will-change-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8dd3ff]",
         variant === "primary"
