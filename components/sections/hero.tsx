@@ -75,7 +75,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.45 }}
             >
-              Eu desenvolvo páginas que fortalecem sua imagem, aumentam o valor percebido e geram mais pedidos de orçamento.
+              Eu desenvolvo páginas que fortalecem sua imagem, aumentam sua autoridade e geram mais pedidos de orçamento.
             </motion.p>
           </div>
 

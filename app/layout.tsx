@@ -26,7 +26,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Nicolas Lucas | Desenvolvimento Web Premium",
   description:
-    "Desenvolvimento de landing pages, sites comerciais e páginas de venda para negócios que querem mais pedidos de orçamento e maior valor percebido.",
+    "Desenvolvimento de landing pages, sites comerciais e páginas de venda para negócios que querem mais pedidos de orçamento e mais autoridade.",
   keywords: ["desenvolvimento web", "landing page", "site profissional", "sites para empresas", "Nicolas Lucas", "NicolasDev"],
   authors: [{ name: "Nicolas Lucas" }],
   creator: "Nicolas Lucas",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     url: "https://www.nicolasdev.online",
     siteName: "NicolasDev",
     title: "Nicolas Lucas | Desenvolvimento Web Premium",
-    description: "Sites estratégicos que aumentam o valor percebido e geram mais pedidos de orçamento para o seu negócio.",
+    description: "Sites estratégicos que aumentam sua autoridade e geram mais pedidos de orçamento para o seu negócio.",
     images: [
       {
         url: "/images/og-image.jpg",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Nicolas Lucas | Desenvolvimento Web Premium",
-    description: "Sites estratégicos que aumentam o valor percebido e geram mais pedidos de orçamento.",
+    description: "Sites estratégicos que aumentam sua autoridade e geram mais pedidos de orçamento.",
     images: ["/images/og-image.jpg"]
   },
   robots: {
