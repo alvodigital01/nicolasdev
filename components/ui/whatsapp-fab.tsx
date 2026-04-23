@@ -1,9 +1,11 @@
-﻿export function WhatsAppFab() {
+﻿import { WHATSAPP_NUMBER } from "@/lib/constants";
+
+export function WhatsAppFab() {
   const message = encodeURIComponent("Olá, Nicolas! Vim pelo seu site e quero um orçamento.");
 
   return (
     <a
-      href={`https://wa.me/5543988724786?text=${message}`}
+      href={`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`}
       target="_blank"
       rel="noreferrer"
       aria-label="Falar no WhatsApp"

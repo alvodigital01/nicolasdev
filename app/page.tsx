@@ -1,4 +1,5 @@
 ﻿import { AboutSection } from "@/components/sections/about";
+import { FaqSection } from "@/components/sections/faq";
 import { FinalCtaSection } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 import { HeroSection } from "@/components/sections/hero";
@@ -92,6 +93,8 @@ export default function HomePage() {
         <SectionDivider variant="echo" />
         <AboutSection />
         <SectionDivider variant="arc" />
+        <FaqSection />
+        <SectionDivider variant="pulse" className="-mt-3 mb-2" />
         <FinalCtaSection />
       </main>
       <SectionDivider variant="horizon" className="-mt-2 mb-0" />

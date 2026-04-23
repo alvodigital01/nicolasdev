@@ -29,6 +29,9 @@ export function FaqSection() {
               <Reveal key={item.question} delay={index * 0.05}>
                 <article className="overflow-hidden rounded-2xl border border-white/10 bg-panel/70">
                   <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${index}`}
                     className="flex w-full items-center justify-between gap-4 p-5 text-left"
                     onClick={() => setOpen(isOpen ? -1 : index)}
                   >
@@ -38,6 +41,8 @@ export function FaqSection() {
                   <AnimatePresence initial={false}>
                     {isOpen ? (
                       <motion.div
+                        id={`faq-panel-${index}`}
+                        role="region"
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}

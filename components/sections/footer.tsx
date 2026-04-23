@@ -1,4 +1,5 @@
 ﻿import Link from "next/link";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
 import { Container } from "../ui/container";
 
 export function Footer() {
@@ -26,10 +27,10 @@ export function Footer() {
           <Link href="#cta" className="transition duration-300 hover:text-accentSoft hover:opacity-100">
             Contato
           </Link>
-          <Link href="https://instagram.com/nicolasdev_oficial" className="transition duration-300 hover:text-accentSoft hover:opacity-100">
+          <Link href="https://instagram.com/nicolasdev_oficial" target="_blank" rel="noreferrer" className="transition duration-300 hover:text-accentSoft hover:opacity-100">
             Instagram
           </Link>
-          <Link href="https://wa.me/5543988724786?text=Ol%C3%A1%2C%20Nicolas.%20Vim%20pelo%20seu%20site%20e%20quero%20um%20or%C3%A7amento%20para%20criar%20um%20site%20profissional%20para%20o%20meu%20neg%C3%B3cio." className="transition duration-300 hover:text-accentSoft hover:opacity-100">
+          <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("Olá, Nicolas. Vim pelo seu site e quero um orçamento para criar um site profissional para o meu negócio.")}`} target="_blank" rel="noreferrer" className="transition duration-300 hover:text-accentSoft hover:opacity-100">
             WhatsApp
           </Link>
         </div>

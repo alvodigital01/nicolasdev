@@ -62,7 +62,7 @@ export function HeroSection() {
             <div className="w-full">
               <div className="inline-flex w-full rounded-[22px] border border-[rgba(248,113,113,0.26)] bg-[linear-gradient(180deg,rgba(127,29,29,0.22),rgba(120,53,15,0.14))] px-4 py-3 text-[13px] font-medium leading-snug text-[#ffd8d1] shadow-[0_10px_30px_-20px_rgba(248,113,113,0.55)] sm:w-auto sm:rounded-full sm:px-4 sm:py-2 sm:text-xs">
                 <span aria-hidden="true" className="mr-2">🔥</span>
-                {"Apenas 4 vagas abertas para Abril - agenda quase cheia."}
+                {"Agenda com poucas vagas abertas — preenchendo rápido."}
               </div>
             </div>
             <PremiumButton href="#cta" className="cta-pulse w-full px-7 py-3.5 text-base sm:w-auto sm:text-sm md:text-base">
@@ -92,7 +92,7 @@ export function HeroSection() {
           <div className="relative mx-auto w-full max-w-[420px] lg:max-w-[520px] xl:max-w-[560px]">
             <div className="relative rounded-[30px] bg-[rgba(255,255,255,0.02)] p-3 shadow-[0_0_60px_rgba(59,130,246,0.18),0_28px_90px_-40px_rgba(0,0,0,0.95)] backdrop-blur-[10px]">
               <div className="relative h-[420px] overflow-hidden rounded-[26px] bg-[#09111d] sm:h-[470px] lg:h-[520px] xl:h-[560px]">
-                <Image src="/images/hero-nicolas.png" alt="Nicolas Lucas, desenvolvedor web" width={2160} height={2700} priority quality={100} unoptimized className="h-full w-full object-cover object-top" sizes="(max-width: 1024px) 420px, (max-width: 1440px) 520px, 560px" />
+                <Image src="/images/hero-nicolas.png" alt="Nicolas Lucas, desenvolvedor web" width={2160} height={2700} priority quality={80} className="h-full w-full object-cover object-top" sizes="(max-width: 1024px) 420px, (max-width: 1440px) 520px, 560px" />
               </div>
 
               <div className="floating-glass absolute bottom-5 right-4 z-10 rounded-full border border-white/15 bg-[rgba(10,18,32,0.42)] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-accentSoft shadow-[0_18px_45px_-24px_rgba(78,161,255,0.85)] backdrop-blur-2xl sm:right-5">

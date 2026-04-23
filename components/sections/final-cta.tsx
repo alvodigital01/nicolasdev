@@ -2,6 +2,7 @@
 
 import { type FormEvent, useState } from "react";
 import { ArrowRight, MessageCircle } from "lucide-react";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionShell } from "../ui/section-shell";
@@ -15,8 +16,6 @@ type FormState = {
   instagram: string;
   details: string;
 };
-
-const WHATSAPP_NUMBER = "5543988724786";
 
 const initialForm: FormState = {
   name: "",
@@ -124,7 +123,7 @@ export function FinalCtaSection() {
                         required
                         value={form.name}
                         onChange={(event) => updateField("name", event.target.value)}
-                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white outline-none transition duration-300 placeholder:text-white/40 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
+                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white transition duration-300 placeholder:text-white/40 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
                         placeholder="Seu nome"
                         autoComplete="name"
                       />
@@ -137,7 +136,7 @@ export function FinalCtaSection() {
                         required
                         value={form.business}
                         onChange={(event) => updateField("business", event.target.value)}
-                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white outline-none transition duration-300 placeholder:text-white/40 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
+                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white transition duration-300 placeholder:text-white/40 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
                         placeholder="Nome do seu negócio"
                         autoComplete="organization"
                       />
@@ -151,7 +150,7 @@ export function FinalCtaSection() {
                         required
                         value={form.projectType}
                         onChange={(event) => updateField("projectType", event.target.value)}
-                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white outline-none transition duration-300 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
+                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white transition duration-300 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
                       >
                         <option>Landing page para anúncios</option>
                         <option>Site comercial para serviços</option>
@@ -166,7 +165,7 @@ export function FinalCtaSection() {
                         required
                         value={form.budget}
                         onChange={(event) => updateField("budget", event.target.value)}
-                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white outline-none transition duration-300 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
+                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white transition duration-300 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
                       >
                         <option>Até R$ 500</option>
                         <option>R$ 500 a R$ 1.000</option>
@@ -183,7 +182,7 @@ export function FinalCtaSection() {
                       <select
                         value={form.deadline}
                         onChange={(event) => updateField("deadline", event.target.value)}
-                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white outline-none transition duration-300 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
+                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white transition duration-300 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
                       >
                         <option>O mais rápido possível</option>
                         <option>Nos próximos 15 dias</option>
@@ -197,7 +196,7 @@ export function FinalCtaSection() {
                         type="text"
                         value={form.instagram}
                         onChange={(event) => updateField("instagram", event.target.value)}
-                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white outline-none transition duration-300 placeholder:text-white/40 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
+                        className="w-full rounded-2xl border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white transition duration-300 placeholder:text-white/40 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
                         placeholder="@seuinstagram"
                         autoComplete="off"
                       />
@@ -210,7 +209,7 @@ export function FinalCtaSection() {
                       rows={5}
                       value={form.details}
                       onChange={(event) => updateField("details", event.target.value)}
-                      className="w-full resize-none rounded-[24px] border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white outline-none transition duration-300 placeholder:text-white/40 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
+                      className="w-full resize-none rounded-[24px] border border-white/[0.08] bg-[rgba(7,14,26,0.78)] px-4 py-3 text-white transition duration-300 placeholder:text-white/40 focus:border-accentSoft/45 focus:bg-[rgba(9,18,32,0.92)]"
                       placeholder="Conte um pouco mais sobre o projeto..."
                     />
                   </label>

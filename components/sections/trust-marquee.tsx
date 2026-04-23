@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { MessageCircle, MoveRight, Rocket, Target } from "lucide-react";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
@@ -47,9 +48,8 @@ export function TrustMarqueeSection() {
                 const isLast = index === steps.length - 1;
 
                 return (
-                  <>
+                  <Fragment key={step.title}>
                     <article
-                      key={step.title}
                       className="group relative flex h-full flex-col overflow-hidden rounded-[24px] border border-white/[0.06] bg-[rgba(255,255,255,0.03)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_18px_40px_-30px_rgba(0,0,0,0.65)] backdrop-blur-[12px] transition duration-300 hover:border-[rgba(126,192,255,0.24)] hover:bg-[rgba(11,22,42,0.5)] hover:shadow-[0_20px_50px_-30px_rgba(78,161,255,0.22),inset_0_1px_0_rgba(255,255,255,0.05)]"
                     >
                       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),transparent_38%)] opacity-80" />
@@ -64,7 +64,6 @@ export function TrustMarqueeSection() {
 
                     {!isLast ? (
                       <div
-                        key={`${step.title}-connector`}
                         aria-hidden="true"
                         className="flex items-center justify-center text-accentSoft/60 max-md:hidden"
                       >
@@ -75,7 +74,7 @@ export function TrustMarqueeSection() {
                         </div>
                       </div>
                     ) : null}
-                  </>
+                  </Fragment>
                 );
               })}
             </div>
