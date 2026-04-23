@@ -7,7 +7,7 @@ import { Container } from "../ui/container";
 import { PremiumButton } from "../ui/premium-button";
 
 const stats = [
-  { value: "1 a 3", label: "dias para entrega" },
+  { value: "5 a 7", label: "dias para entrega" },
   { value: "visual", label: "premium em qualquer tela" },
   { value: "+ vendas", label: "mais impulso para fechar" }
 ];
@@ -40,15 +40,30 @@ export function HeroSection() {
                 que vende.
               </span>
               <span className="hidden sm:block sm:max-w-none sm:text-[clamp(2rem,3.3vw,3.2rem)] sm:leading-[0.96]">
-                <motion.span className="block" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}>
+                <motion.span
+                  className="block"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
+                >
                   Lucre mais
                 </motion.span>
-                <motion.span className="block" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}>
+                <motion.span
+                  className="block"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                >
                   com um site
                 </motion.span>
-                <motion.span className="block" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}>
+                <motion.span
+                  className="block"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.55, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+                >
                   <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
-                    profissional e estrategico.
+                    profissional e estratégico.
                   </span>
                 </motion.span>
               </span>
@@ -60,7 +75,7 @@ export function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.45 }}
             >
-              Eu desenvolvo paginas que fortalecem sua imagem, aumentam o valor percebido e geram mais pedidos de orcamento.
+              Eu desenvolvo páginas que fortalecem sua imagem, aumentam o valor percebido e geram mais pedidos de orçamento.
             </motion.p>
           </div>
 
@@ -71,7 +86,7 @@ export function HeroSection() {
             transition={{ duration: 0.55, delay: 0.62 }}
           >
             <PremiumButton href="#cta" className="cta-pulse w-full px-7 py-3.5 text-base sm:w-auto sm:text-sm md:text-base">
-              Pedir orcamento <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              Pedir orçamento <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </PremiumButton>
             <PremiumButton href="#portfolio" variant="secondary" className="w-full px-7 py-3.5 text-base sm:w-auto sm:text-sm md:text-base">
               <MessageCircle className="mr-2 h-4 w-4 text-accentSoft" /> Ver projetos reais

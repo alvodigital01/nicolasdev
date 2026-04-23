@@ -155,7 +155,7 @@ export const processSteps: ProcessStep[] = [
 export const faqs: FAQ[] = [
   {
     question: "Quanto tempo leva para o site ficar pronto?",
-    answer: "Depende do escopo, mas projetos de landing page normalmente levam de 7 a 14 dias e institucionais de 15 a 30 dias."
+    answer: "Tanto para landing page quanto para site institucional, o prazo médio de entrega fica entre 5 e 7 dias, dependendo do material e da rapidez na aprovação."
   },
   {
     question: "O site funciona bem no celular?",
