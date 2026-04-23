@@ -238,16 +238,16 @@
 | I1 | `next.config.mjs` | Sem security headers (CSP, X-Frame-Options, etc.) + `poweredByHeader: false` | S | ✅ Resolvido |
 | I2 | `layout.tsx:100` | `preconnect` inútil para `wa.me` — remover | S | ✅ Resolvido |
 | I3 | `layout.tsx:11,17` | Peso 500 carregado sem uso para Sora e Jakarta | S | ✅ Resolvido |
-| I4 | Raiz do projeto | GIFs e avatares fora de `/public` | S | Pendente |
+| I4 | Raiz do projeto | GIFs e avatares fora de `/public` | S | ✅ Resolvido (`/public/images/portfolio/`, `/public/images/testimonials/`) |
 | I5 | `page.tsx` | `FaqSection` não renderizada — conteúdo de conversão e SEO desperdiçado | S | ✅ Resolvido |
-| I6 | `portfolio.tsx` | 3 projetos com `href: "#"` — links mortos com métricas não verificáveis | M | Pendente |
+| I6 | `portfolio.tsx` | 3 projetos com `href: "#"` — links mortos com métricas não verificáveis | M | Pendente (decisão de conteúdo) |
 | I7 | Múltiplos | WhatsApp number hardcoded em 4 arquivos | S | ✅ Resolvido (`lib/constants.ts`) |
-| I8 | `data/site.ts` | Tipo `Testimonial` e dados de depoimentos duplicados/inconsistentes | S | Pendente |
+| I8 | `data/site.ts` | Tipo `Testimonial` e dados de depoimentos duplicados/inconsistentes | S | ✅ Resolvido |
 | I9 | `trust-marquee.tsx:50–78` | Fragment sem key em lista — React warning | S | ✅ Resolvido |
 | I10 | `globals.css` | `will-change` em múltiplos elementos simultâneos — pressão desnecessária na GPU | S | Pendente |
 | I11 | Múltiplos | Contraste `text-white/52` a `text-white/65` possivelmente abaixo de 4.5:1 | M | Pendente |
-| I12 | `layout.tsx:83` | Schema.org `sameAs` com `wa.me` em vez de LinkedIn/GitHub | S | Pendente |
-| I13 | `data/site.ts` | Código morto: depoimentos fictícios, serviços com imagens não usadas | S | Pendente |
+| I12 | `layout.tsx:83` | Schema.org `sameAs` com `wa.me` em vez de LinkedIn/GitHub | S | ✅ Resolvido |
+| I13 | `data/site.ts` | Código morto: depoimentos fictícios, serviços com imagens não usadas | S | ✅ Resolvido |
 
 ### 🟢 NICE-TO-HAVE — Backlog de qualidade
 
