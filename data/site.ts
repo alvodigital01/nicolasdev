@@ -38,7 +38,6 @@ export type FAQ = {
 
 export const navItems: NavItem[] = [
   { label: "Início", href: "#inicio" },
-  { label: "Oferta", href: "#servicos" },
   { label: "Projetos", href: "#portfolio" },
   { label: "Contato", href: "#cta" }
 ];

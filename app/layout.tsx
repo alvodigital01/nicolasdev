@@ -85,7 +85,7 @@ const personSchema = {
     "@type": "Offer",
     name: "Desenvolvimento de Sites e Landing Pages",
     description: "Landing pages para anúncios, sites comerciais para serviços e páginas de vendas e captura.",
-    url: "https://www.nicolasdev.online/#servicos"
+    url: "https://www.nicolasdev.online/#cta"
   }
 };
 

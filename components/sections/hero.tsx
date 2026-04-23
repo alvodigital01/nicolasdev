@@ -31,9 +31,9 @@ export function HeroSection() {
             </div>
           </motion.div>
 
-          <div className="space-y-3 sm:space-y-4 xl:space-y-5">
-            <h1 className="font-display font-semibold text-white">
-              <span className="block max-w-[10ch] text-[clamp(2.45rem,11.5vw,3.2rem)] leading-[0.92] sm:hidden">
+          <div className="space-y-4 text-center sm:space-y-4 sm:text-left xl:space-y-5">
+            <h1 className="font-display font-semibold tracking-[-0.02em] text-white">
+              <span className="mx-auto block max-w-[10ch] text-[clamp(3.2rem,14.2vw,4rem)] leading-[0.87] sm:hidden">
                 Lucre mais com um site
                 <span className="block bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
                   profissional
@@ -42,7 +42,7 @@ export function HeroSection() {
               </span>
               <span className="hidden sm:block sm:max-w-none sm:text-[clamp(2rem,3.3vw,3.2rem)] sm:leading-[0.96]">
                 <motion.span className="block" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}>
-                  Lucre muito mais
+                  Lucre mais
                 </motion.span>
                 <motion.span className="block" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}>
                   com um site
@@ -53,7 +53,7 @@ export function HeroSection() {
               </span>
             </h1>
 
-            <motion.p className="max-w-[32ch] text-base leading-relaxed text-textMuted sm:max-w-xl sm:text-[15px] md:text-lg" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.45 }}>
+            <motion.p className="mx-auto max-w-[34ch] text-[1.05rem] leading-relaxed text-textMuted sm:mx-0 sm:max-w-xl sm:text-[15px] md:text-lg" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.45 }}>
               Eu desenvolvo páginas que fortalecem sua imagem, aumentam o valor percebido e geram mais pedidos de orçamento.
             </motion.p>
           </div>

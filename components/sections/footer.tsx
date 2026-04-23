@@ -18,9 +18,6 @@ export function Footer() {
           <p className="mt-2 text-sm text-textMuted">Páginas mais objetivas, visuais e pensadas para gerar conversa.</p>
         </div>
         <div className="flex flex-wrap items-center gap-5 text-sm text-white/60">
-          <Link href="#servicos" className="transition duration-300 hover:text-accentSoft hover:opacity-100">
-            Oferta
-          </Link>
           <Link href="#portfolio" className="transition duration-300 hover:text-accentSoft hover:opacity-100">
             Projetos
           </Link>
@@ -38,5 +35,4 @@ export function Footer() {
     </footer>
   );
 }
-
 

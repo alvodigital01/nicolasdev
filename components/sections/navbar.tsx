@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container } from "../ui/container";
 import { PremiumButton } from "../ui/premium-button";
 
@@ -13,6 +13,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const reduced = useReducedMotion();
+  const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 18);
@@ -32,6 +33,28 @@ export function Navbar() {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const update = () => {
+      const { width, height } = svg.getBoundingClientRect();
+      if (!width || !height) return;
+      svg.setAttribute("viewBox", `0 0 ${width} ${height}`);
+      svg.querySelectorAll("rect").forEach(el => {
+        el.setAttribute("x", "1.5");
+        el.setAttribute("y", "1.5");
+        el.setAttribute("width", String(width - 3));
+        el.setAttribute("height", String(height - 3));
+        el.setAttribute("rx", "28");
+        el.setAttribute("ry", "28");
+      });
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(svg);
+    return () => ro.disconnect();
+  }, []);
+
   function closeMenu() { setMenuOpen(false); }
 
   return (
@@ -45,10 +68,10 @@ export function Navbar() {
         <Container>
           <div className="relative rounded-[28px]">
             <div className="pointer-events-none absolute inset-[-2px] rounded-[28px]">
-              <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="header-flow-frame absolute inset-0 h-full w-full">
-                <rect x="1" y="1" width="98" height="98" rx="27" ry="27" pathLength="100" className="header-flow-halo" />
-                <rect x="1" y="1" width="98" height="98" rx="27" ry="27" pathLength="100" className="header-flow-stream-soft" />
-                <rect x="1" y="1" width="98" height="98" rx="27" ry="27" pathLength="100" className="header-flow-stream" />
+              <svg ref={svgRef} viewBox="0 0 800 90" preserveAspectRatio="none" className="absolute inset-0 h-full w-full">
+                <rect x="1.5" y="1.5" width="797" height="87" rx="28" ry="28" pathLength="100" className="header-flow-halo" />
+                <rect x="1.5" y="1.5" width="797" height="87" rx="28" ry="28" pathLength="100" className="header-flow-stream-soft" />
+                <rect x="1.5" y="1.5" width="797" height="87" rx="28" ry="28" pathLength="100" className="header-flow-stream" />
               </svg>
             </div>
 

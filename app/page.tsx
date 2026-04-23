@@ -5,7 +5,6 @@ import { Footer } from "@/components/sections/footer";
 import { HeroSection } from "@/components/sections/hero";
 import { Navbar } from "@/components/sections/navbar";
 import { PortfolioSection } from "@/components/sections/portfolio";
-import { ServicesSection } from "@/components/sections/services";
 import { TestimonialsSection } from "@/components/sections/testimonials";
 import { TrustMarqueeSection } from "@/components/sections/trust-marquee";
 
@@ -85,7 +84,6 @@ export default function HomePage() {
         <HeroSection />
         <SectionDivider variant="hero" />
         <TrustMarqueeSection />
-        <ServicesSection />
         <SectionDivider variant="ribbon" />
         <PortfolioSection />
         <SectionDivider variant="pulse" />
