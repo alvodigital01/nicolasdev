@@ -17,6 +17,7 @@ const featuredProjects = [
     accent: "from-[#ef4444]/20 via-[#1d4ed8]/16 to-transparent",
     href: "https://fred-pe-as.vercel.app",
     image: "/images/portfolio/fredpecas.gif",
+    mobileImage: "/images/projects/fred-pecas.svg",
     alt: "Preview do site Fred Peças"
   },
   {
@@ -27,6 +28,7 @@ const featuredProjects = [
     accent: "from-white/12 via-stone-300/10 to-transparent",
     href: "https://www.drdrywall.online",
     image: "/images/portfolio/drdrywall.gif",
+    mobileImage: "/images/projects/dr-drywall.svg",
     alt: "Preview do site DR Drywall"
   },
   {
@@ -37,6 +39,7 @@ const featuredProjects = [
     accent: "from-[#ffb320]/20 via-[#b9dfff]/22 to-transparent",
     href: "https://luarerecreacoes.com.br/",
     image: "/images/portfolio/luare.gif",
+    mobileImage: "/images/projects/luna-arquitetura.svg",
     alt: "Preview do site Luarê Recreações"
   }
 ];
@@ -57,7 +60,7 @@ export function PortfolioSection() {
               </span>
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
-              Cada site foi desenvolvido para um negócio específico - com foco em clareza, confiança e mais pedidos de orçamento.
+              Cada site foi desenvolvido para um negócio específico, com foco em clareza, confiança e mais pedidos de orçamento.
             </p>
           </div>
         </Reveal>
@@ -81,14 +84,27 @@ export function PortfolioSection() {
 
                     <div className="relative overflow-hidden rounded-2xl transition duration-700 group-hover:scale-[1.01] group-hover:brightness-110">
                       <div className={`pointer-events-none absolute inset-0 z-10 bg-gradient-to-br ${project.accent}`} />
+
+                      <Image
+                        src={project.mobileImage}
+                        alt={project.alt}
+                        width={1200}
+                        height={630}
+                        className="h-52 w-full object-cover object-center md:hidden"
+                      />
+
                       <Image
                         src={project.image}
                         alt={project.alt}
                         width={1200}
                         height={630}
                         unoptimized
-                        className="h-52 w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.05]"
+                        className="hidden h-52 w-full object-cover object-top transition duration-700 ease-out group-hover:scale-[1.05] md:block"
                       />
+
+                      <div className="absolute bottom-3 right-3 z-20 rounded-full border border-white/12 bg-[rgba(8,14,24,0.72)] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70 md:hidden">
+                        Preview leve no mobile
+                      </div>
                     </div>
 
                     <div className="relative mt-5 flex items-start justify-between gap-3">
