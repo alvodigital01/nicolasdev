@@ -80,7 +80,7 @@ const personSchema = {
   jobTitle: "Desenvolvedor Web",
   description:
     "Desenvolvimento de landing pages e sites comerciais estratégicos para negócios que querem mais pedidos de orçamento.",
-  sameAs: ["https://instagram.com/nicolasdev_oficial", "https://wa.me/5543988724786"],
+  sameAs: ["https://instagram.com/nicolasdev_oficial"],
   offers: {
     "@type": "Offer",
     name: "Desenvolvimento de Sites e Landing Pages",

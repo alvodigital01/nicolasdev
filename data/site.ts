@@ -31,12 +31,6 @@ export type ProcessStep = {
   description: string;
 };
 
-export type Testimonial = {
-  name: string;
-  role: string;
-  quote: string;
-};
-
 export type FAQ = {
   question: string;
   answer: string;
@@ -156,24 +150,6 @@ export const processSteps: ProcessStep[] = [
   {
     title: "Entrega e Ajustes",
     description: "Validação final, refinamentos estratégicos e publicação para seu site entrar em operação forte."
-  }
-];
-
-export const testimonials: Testimonial[] = [
-  {
-    name: "Marina Costa",
-    role: "CEO, Studio Móveis Planejados",
-    quote: "O site elevou completamente nossa imagem. Hoje os clientes chegam dizendo que a marca parece outro nível."
-  },
-  {
-    name: "Rafael Mendes",
-    role: "Gestor, Prime Car Detail",
-    quote: "A estrutura foi pensada para converter de verdade. O volume de orçamentos aumentou já na primeira semana."
-  },
-  {
-    name: "Camila Torres",
-    role: "Mentora de Negócios",
-    quote: "Finalmente tenho uma presença digital profissional que combina com o valor do meu serviço."
   }
 ];
 

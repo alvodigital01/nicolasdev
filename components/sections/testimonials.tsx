@@ -1,7 +1,4 @@
 ﻿import Image from "next/image";
-import davidRuanAvatar from "../../davidruandep.png";
-import tioMiojoAvatar from "../../tiomiojodep.png";
-import lucasFredAvatar from "../../lucasfreddep.png";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionHeading } from "../ui/section-heading";
@@ -20,21 +17,21 @@ const testimonials: Testimonial[] = [
     business: "Fred Peças Elétricas",
     quote:
       "Agora ficou muito mais fácil mostrar nossas peças e passar confiança no atendimento. O cliente entra no site, entende melhor o que a empresa faz e já chama no WhatsApp para pedir orçamento.",
-    avatar: lucasFredAvatar.src
+    avatar: "/images/testimonials/lucas-fred.png"
   },
   {
     name: "David Ruan",
     business: "DR Drywall",
     quote:
       "O site deixou nossa empresa com uma imagem bem mais profissional. Ficou mais fácil passar confiança no primeiro contato e receber pedidos de orçamento.",
-    avatar: davidRuanAvatar.src
+    avatar: "/images/testimonials/david-ruan.png"
   },
   {
     name: "Tio Miojo",
     business: "Luarê Recreações",
     quote:
       "Ficou muito mais fácil mostrar nossos eventos infantis e corporativos sem depender só do Instagram. O site passa confiança e ajuda bastante quando alguém pede o link.",
-    avatar: tioMiojoAvatar.src
+    avatar: "/images/testimonials/tio-miojo.png"
   }
 ];
 
