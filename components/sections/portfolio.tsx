@@ -15,7 +15,7 @@ const featuredProjects = [
     description: "Site comercial com CTA no WhatsApp, foco em estoque e atendimento para linha 12V e 24V.",
     metrics: "Catálogo e consultoria",
     accent: "from-[#ef4444]/20 via-[#1d4ed8]/16 to-transparent",
-    href: "https://fred-pe-as.vercel.app",
+    href: "https://www.fredpecasetricas.online",
     image: "/images/portfolio/fredpecas.gif",
     mobileImage: "/images/portfolio/sitefred.png",
     alt: "Preview do site Fred Peças"

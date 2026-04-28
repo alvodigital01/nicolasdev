@@ -89,7 +89,7 @@ export const projects: Project[] = [
     description: "Site comercial com CTA no WhatsApp, foco em estoque e atendimento para linha 12V e 24V.",
     metrics: "Catálogo e consultoria",
     image: "/images/projects/fred-pecas.svg",
-    href: "https://fred-pe-as.vercel.app"
+    href: "https://www.fredpecasetricas.online"
   },
   {
     name: "DR Drywall",
