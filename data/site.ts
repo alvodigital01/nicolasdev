@@ -47,19 +47,19 @@ export const services: Service[] = [
     title: "Landing page para anúncio",
     description: "Página curta e forte para transformar clique em lead, conversa ou pedido de orçamento.",
     icon: "rocket",
-    image: "/images/services/landing.png"
+    image: "/images/services/landing.webp"
   },
   {
     title: "Site comercial para serviço",
     description: "Estrutura enxuta para apresentar oferta, transmitir confiança e facilitar a decisão do cliente.",
     icon: "layout",
-    image: "/images/services/institucional.png"
+    image: "/images/services/institucional.webp"
   },
   {
     title: "Página de vendas ou captura",
     description: "Blocos pensados para destacar valor, reduzir objeção e levar o visitante para a ação.",
     icon: "megaphone",
-    image: "/images/services/vendas.png"
+    image: "/images/services/vendas.webp"
   }
 ];
 

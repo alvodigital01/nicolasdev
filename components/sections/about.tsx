@@ -6,11 +6,11 @@ import { SectionShell } from "../ui/section-shell";
 
 const credentials = [
   {
-    label: "+10 projetos entregues",
+    label: "+30 clientes atendidos",
     icon: Bolt
   },
   {
-    label: "Prazo médio de 3 dias",
+    label: "Prazo médio de 5 dias",
     icon: CalendarDays
   },
   {
@@ -28,7 +28,7 @@ export function AboutSection() {
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),transparent_32%)]" />
             <div className="relative overflow-hidden rounded-[24px] border border-white/10 bg-[rgba(7,14,26,0.6)]">
               <Image
-                src="/images/nicolasfotosobremesa.png"
+                src="/images/nicolasfotosobremesa.webp"
                 alt="Nicolas Lucas, desenvolvedor web"
                 width={400}
                 height={500}
@@ -52,7 +52,7 @@ export function AboutSection() {
 
             <div className="space-y-4">
               <p className="text-sm leading-relaxed text-textMuted md:text-base">
-                Sou Nicolas Lucas, desenvolvedor web com mais de 1 ano de experiência entregando sites e landing pages para negócios reais. Já entreguei mais de 10 projetos com foco em clareza, conversão e prazo.
+                Sou Nicolas Lucas, desenvolvedor web com mais de 1 ano de experiência entregando sites e landing pages para negócios reais. Já atendi mais de 30 clientes com foco em clareza, conversão e prazo.
               </p>
               <p className="text-sm leading-relaxed text-textMuted md:text-base">
                 Não trabalho com template genérico, nem entrego site bonito que não vende. Cada página que crio é pensada para o negócio do cliente, do copy ao CTA.

@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     description: "Sites estratégicos que aumentam sua autoridade e geram mais pedidos de orçamento para o seu negócio.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Nicolas Lucas - Desenvolvimento Web Premium"
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nicolas Lucas | Desenvolvimento Web Premium",
     description: "Sites estratégicos que aumentam sua autoridade e geram mais pedidos de orçamento.",
-    images: ["/images/og-image.jpg"]
+    images: ["/images/og-image.webp"]
   },
   robots: {
     index: true,

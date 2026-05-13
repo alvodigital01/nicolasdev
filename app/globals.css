@@ -185,38 +185,6 @@ footer {
   }
 }
 
-@keyframes dividerDrift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  50% {
-    transform: translate3d(0, -2px, 0);
-  }
-}
-
-@keyframes dividerHaloPulse {
-  0%,
-  100% {
-    opacity: 0.5;
-  }
-
-  50% {
-    opacity: 0.88;
-  }
-}
-
-@keyframes dividerStream {
-  from {
-    stroke-dashoffset: 160;
-  }
-
-  to {
-    stroke-dashoffset: -160;
-  }
-}
-
 @keyframes headerFlowHalo {
   0%,
   100% {
@@ -356,27 +324,6 @@ footer {
     animation: headerFlowStream 5.2s linear infinite;
   }
 
-  .section-divider-flow {
-    animation: dividerDrift 8.5s ease-in-out infinite;
-    overflow: visible;
-  }
-
-  .section-divider-halo {
-    animation: dividerHaloPulse 6.2s ease-in-out infinite;
-    filter: blur(1px);
-    transform-origin: center;
-  }
-
-  .section-divider-stroke {
-    opacity: 0.92;
-  }
-
-  .section-divider-stream {
-    stroke-dasharray: 10 150;
-    animation: dividerStream 4.4s linear infinite;
-    filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 14px rgba(126, 192, 255, 0.45));
-    mix-blend-mode: screen;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

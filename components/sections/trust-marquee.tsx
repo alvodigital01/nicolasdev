@@ -16,7 +16,7 @@ const steps = [
     icon: Target
   },
   {
-    title: "Site no ar em até 3 dias",
+    title: "Site no ar em até 7 dias",
     description: "Você recebe o projeto pronto para receber clientes e fechar mais negócios.",
     icon: Rocket
   }

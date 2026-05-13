@@ -126,7 +126,7 @@ export function HeroSection() {
             <div className="relative rounded-[30px] bg-[rgba(255,255,255,0.02)] p-3 shadow-[0_0_60px_rgba(59,130,246,0.18),0_28px_90px_-40px_rgba(0,0,0,0.95)] backdrop-blur-[10px]">
               <div className="relative h-[420px] overflow-hidden rounded-[26px] bg-[#09111d] sm:h-[470px] lg:h-[520px] xl:h-[560px]">
                 <Image
-                  src="/images/hero-nicolas.png"
+                  src="/images/hero-nicolas.webp"
                   alt="Nicolas Lucas, desenvolvedor web"
                   width={2160}
                   height={2700}

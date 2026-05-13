@@ -16,8 +16,8 @@ const featuredProjects = [
     metrics: "Catálogo e consultoria",
     accent: "from-[#ef4444]/20 via-[#1d4ed8]/16 to-transparent",
     href: "https://www.fredpecasetricas.online",
-    image: "/images/portfolio/fredpecas.gif",
-    mobileImage: "/images/portfolio/sitefred.png",
+    image: "/images/portfolio/fredpecas.webp",
+    mobileImage: "/images/portfolio/sitefred.webp",
     alt: "Preview do site Fred Peças"
   },
   {
@@ -27,8 +27,8 @@ const featuredProjects = [
     metrics: "Orçamento direto",
     accent: "from-white/12 via-stone-300/10 to-transparent",
     href: "https://www.drdrywall.online",
-    image: "/images/portfolio/drdrywall.gif",
-    mobileImage: "/images/portfolio/sitedr.png",
+    image: "/images/portfolio/drdrywall.webp",
+    mobileImage: "/images/portfolio/sitedr.webp",
     alt: "Preview do site DR Drywall"
   },
   {
@@ -38,8 +38,8 @@ const featuredProjects = [
     metrics: "WhatsApp em destaque",
     accent: "from-[#ffb320]/20 via-[#b9dfff]/22 to-transparent",
     href: "https://luarerecreacoes.com.br/",
-    image: "/images/portfolio/luare.gif",
-    mobileImage: "/images/portfolio/siteluare.png",
+    image: "/images/portfolio/luare.webp",
+    mobileImage: "/images/portfolio/siteluare.webp",
     alt: "Preview do site Luarê Recreações"
   }
 ];
@@ -51,12 +51,12 @@ export function PortfolioSection() {
         <Reveal>
           <div className="max-w-3xl space-y-4">
             <span className="inline-flex rounded-full border border-white/15 bg-white/[0.04] px-4 py-1 text-xs font-medium uppercase tracking-[0.18em] text-accentSoft">
-              Projetos em destaque
+              Portfólio
             </span>
             <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
-              Projetos reais, entregues para{" "}
+              Sites reais, criados para{" "}
               <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
-                clientes reais
+                vender mais
               </span>
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
