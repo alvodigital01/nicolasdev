@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, TrendingUp } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Container } from "../ui/container";
 import { Reveal } from "../ui/reveal";
 import { SectionShell } from "../ui/section-shell";
@@ -12,8 +12,7 @@ const featuredProjects = [
   {
     name: "Fred Peças",
     category: "Institucional",
-    description: "Site comercial com CTA no WhatsApp, foco em estoque e atendimento para linha 12V e 24V.",
-    metrics: "Catálogo e consultoria",
+    description: "Vitrine técnica para peças elétricas automotivas, com leitura rápida da atuação em linhas 12V e 24V e caminho direto para cotação.",
     accent: "from-[#ef4444]/20 via-[#1d4ed8]/16 to-transparent",
     href: "https://www.fredpecasetricas.online",
     image: "/images/portfolio/fredpecas.webp",
@@ -23,8 +22,7 @@ const featuredProjects = [
   {
     name: "DR Drywall",
     category: "Institucional",
-    description: "Site premium para drywall residencial e corporativo, com foco em autoridade visual e pedido de orçamento.",
-    metrics: "Orçamento direto",
+    description: "Presença digital mais premium para serviços de drywall, destacando aplicações em obras residenciais e comerciais antes do pedido de orçamento.",
     accent: "from-white/12 via-stone-300/10 to-transparent",
     href: "https://www.drdrywall.online",
     image: "/images/portfolio/drdrywall.webp",
@@ -34,8 +32,7 @@ const featuredProjects = [
   {
     name: "Luarê Recreações",
     category: "Institucional",
-    description: "Site leve com CTA no WhatsApp e foco em eventos infantis e corporativos.",
-    metrics: "WhatsApp em destaque",
+    description: "Página com linguagem leve para festas e eventos infantis, organizando a proposta da recreação e passando segurança para pais e empresas.",
     accent: "from-[#ffb320]/20 via-[#b9dfff]/22 to-transparent",
     href: "https://luarerecreacoes.com.br/",
     image: "/images/portfolio/luare.webp",
@@ -54,13 +51,13 @@ export function PortfolioSection() {
               Portfólio
             </span>
             <h2 className="font-display text-3xl font-semibold leading-tight text-white md:text-4xl">
-              Sites reais, criados para{" "}
+              Interfaces que transformam visita em{" "}
               <span className="bg-[linear-gradient(135deg,#8DD3FF_0%,#F4FBFF_55%,#9FD8FF_100%)] bg-clip-text text-transparent">
-                vender mais
+                pedido de orçamento
               </span>
             </h2>
             <p className="max-w-2xl text-sm leading-relaxed text-textMuted md:text-base">
-              Cada site foi desenvolvido para um negócio específico, com foco em clareza, confiança e mais pedidos de orçamento.
+              Cada site abaixo foi pensado para resolver um problema comercial diferente: explicar a oferta, reduzir dúvidas e deixar o contato fácil.
             </p>
           </div>
         </Reveal>
@@ -103,41 +100,28 @@ export function PortfolioSection() {
                       />
                     </div>
 
-                    <div className="relative mt-5 flex items-start justify-between gap-3">
-                      <h3 className="font-display text-xl text-white">{project.name}</h3>
-                      <span className="rounded-full border border-white/12 bg-transparent px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white/60">
-                        {project.category}
-                      </span>
+                    <div className="relative mt-5 flex flex-1 flex-col">
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                        <h3 className="font-display text-xl text-white">{project.name}</h3>
+                        <span className="w-fit rounded-full border border-white/12 bg-transparent px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white/60">
+                          {project.category}
+                        </span>
+                      </div>
+
+                      <p className="mt-3 text-sm leading-relaxed text-textMuted md:text-base">
+                        {project.description}
+                      </p>
+
+                      <Link
+                        href={project.href}
+                        className="mt-auto inline-flex w-fit items-center gap-2 pt-6 text-sm font-medium text-white/65 transition duration-300 hover:text-accentSoft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8dd3ff] group-hover:text-accentSoft"
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noreferrer noopener" : undefined}
+                      >
+                        Visitar site
+                        <ArrowUpRight className="h-4 w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                      </Link>
                     </div>
-
-                    <p
-                      className="relative mt-3 min-h-[72px] text-sm leading-relaxed text-textMuted md:min-h-[78px] md:text-base"
-                      style={{
-                        display: "-webkit-box",
-                        WebkitBoxOrient: "vertical",
-                        WebkitLineClamp: 3,
-                        overflow: "hidden"
-                      }}
-                    >
-                      {project.description}
-                    </p>
-
-                    <div className="relative mt-4 inline-flex max-w-full items-center gap-2 rounded-full bg-[rgba(61,182,255,0.08)] px-3 py-1.5 text-sm font-medium text-[#9ddbff] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
-                      <TrendingUp className="h-4 w-4 shrink-0" />
-                      <span className="truncate whitespace-nowrap bg-[linear-gradient(135deg,#8DD3FF_0%,#DDF4FF_100%)] bg-clip-text text-transparent">
-                        {project.metrics}
-                      </span>
-                    </div>
-
-                    <Link
-                      href={project.href}
-                      className="relative mt-6 inline-flex items-center gap-2 text-sm font-medium text-white/65 transition duration-300 hover:text-accentSoft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#8dd3ff] group-hover:text-accentSoft"
-                      target={isExternal ? "_blank" : undefined}
-                      rel={isExternal ? "noreferrer noopener" : undefined}
-                    >
-                      Visitar site
-                      <ArrowUpRight className="h-4 w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-                    </Link>
                   </motion.article>
                 </div>
               </Reveal>
